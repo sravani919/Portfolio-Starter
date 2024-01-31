@@ -1,0 +1,67 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a.active {
+    font-weight: bold;
+}
+
+.project-section {
+    margin: 20px;
+}
+
+.project {
+    margin-bottom: 40px;
+}
+
+.project a {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+/* Add additional styles here */
+.project-image {
+    width: 100%; /* Adjust as needed */
+    height: auto;
+    display: block;
+}
+
+.project-details {
+    /* Style for your project details */
+    background-color: #f0f0f0; /* Light grey background */
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.code-image {
+    width: 100%; /* Adjust as needed */
+    height: auto;
+    display: block;
+    margin-top: 10px;
+}
+
+/* Add additional styles here */
+.image-label {
+    text-align: center;
+    display: block; /* Makes the <p> tag behave like a block element */
+    /* Other styling as needed */
+}
+a {
+    color: blue;
+    text-decoration: none; /* Optional: removes the underline */
+}
+
+a:hover {
+    text-decoration: underline; /* Optional: adds an underline on hover */
+}
+

@@ -1,0 +1,227 @@
+/* Resetting default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+nav ul {
+    list-style-type: none;
+    background-color: #333;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 15px 20px;
+    display: inline-block;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+}
+
+.profile-photo {
+    display: block;
+    margin: 20px auto;
+    width: 150px;
+    border-radius: 50%;
+}
+
+.about-me {
+    background: white;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 800px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    color: #333;
+}
+
+.resume-download {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+.resume-download:hover {
+    background-color: #0056b3;
+}
+
+footer p {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+blockquote {
+    font-style: italic;
+    margin: 20px 0;
+    padding: 10px 20px;
+    background: #f0f0f0;
+    border-left: 3px solid #007bff;
+}
+
+/* Additional styles for Testimonials, Contact, Work Samples, and Social Media Links */
+/* ... */
+img {
+    max-width: 100%;
+    height: auto;
+    margin: 10px 0;
+  }
+
+  figure {
+    max-width: 800px; /* Set the maximum width for the figure */
+    margin: 0 auto; /* Center the figure on the page */
+  }
+
+  figcaption {
+    text-align: center; /* Center the caption text */
+  }
+  
+  .career-milestones {
+    text-align: center;
+}
+
+.milestone-image {
+    /* Style as needed */
+}
+
+.milestone-label {
+    color: blue;
+    cursor: pointer;
+    /* Style as needed */
+}
+
+.milestone-details {
+    margin-top: 20px;
+    /* Style the details container as needed */
+}
+
+.member-photo {
+    /* Adjust the width and height to create a square aspect ratio */
+    width: 200px; /* Example size */
+    height: 200px; /* Example size */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+}
+
+.highlight-label {
+    /* Style for the label text */
+    font-weight: bold; /* Makes text bold */
+    text-align: center; /* Centers the label */
+    margin-top: 10px; /* Spacing between image and label */
+    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white background */
+    display: inline-block; /* Ensures the background only covers the text */
+    padding: 5px; /* Padding around the text */
+    border-radius: 5px; /* Rounded corners for the background */
+    font-size: 1.2em; /* Larger font size for visibility */
+}
+
+.highlight-container {
+    text-align: center; /* Center the image and label */
+}
+.career-milestone img {
+    width: 100%; /* Adjust width as needed */
+    border: 1px solid #ccc; /* Optional border */
+  }
+
+  .career-milestone p {
+    text-align: center;
+    color: #007bff; /* Theme color for clickable text */
+    cursor: pointer;
+  }
+
+  /* Modal styles */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+
+  /* Modal Content Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .highlight {
+    margin-top: 20px;
+    background-color: #f2f2f2; /* Light grey background */
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.highlight h2 {
+    color: #0056b3; /* Dark blue for the title */
+}
+
+.highlight img {
+    width: 100%; /* Responsive image width */
+    height: auto; /* Maintain aspect ratio */
+    margin-top: 10px;
+}
+
+.highlight .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff; /* Button color */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.highlight .btn:hover {
+    background-color: #0056b3; /* Darker button color on hover */
+}

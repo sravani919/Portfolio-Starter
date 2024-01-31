@@ -1,0 +1,84 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+}
+
+.hero {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.page-title {
+    text-align: center;
+    font-size: 2em;
+    margin-top: 10px;
+}
+
+.page-subtitle {
+    text-align: center;
+    font-size: 1.5em;
+    color: grey;
+    margin-bottom: 20px;
+}
+
+.bio-block {
+    margin: 0 15%;
+    text-align: justify;
+}
+
+.section-heading {
+    font-weight: bold;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+    width: 100%;
+    height: auto;
+}
+
+.card-title {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+.card-text {
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+.btn {
+    margin-top: 10px;
+}
+
+.applet-div {
+    margin: 0 15%;
+    text-align: center;
+}
+
+.textfield {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: calc(100% - 22px);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f0f0f0;
+    margin-top: 40px;
+}
