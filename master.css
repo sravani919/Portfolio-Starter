@@ -345,10 +345,11 @@ div[role="progressbar"] {
 	margin-bottom: 15px;
 }
 
-.Certificate-list p {
+.Certificate-list a {
 	font-size: 15px;
 	line-height: 25px;
     Position:Centre;
+
 }  
 
 /*****TESTIMONIAL SECTION*****/
@@ -369,7 +370,8 @@ div[role="progressbar"] {
 	font-size: 16px;
 	line-height: 28px;
 	position: relative;
-	text-align: center
+	text-align: center;
+   
 }
 
 .testimonial i {
