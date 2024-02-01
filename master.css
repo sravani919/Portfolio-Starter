@@ -46,6 +46,7 @@ html, body
 
 nav {
 	float: right;
+    width: 100%;
 }
 
 nav a {
@@ -117,12 +118,7 @@ nav a {
 	margin-bottom: 50px;
 	color: #ffbf35;
 }
-.about-img {
-	width: 60%;
-	padding: 0px 50px;
-	margin-top: 20px;
-    position: centre;
-}
+
 .about-us {
 	width: 100%;
 	float: left;
@@ -171,11 +167,17 @@ table td {
 	float: left;
 }
 
+.other__skills {
+    margin-left: 30px;
+    margin-top: 70px;
+}
+
 .progress-container {
 	display: flex;
 	flex-direction: row; /* This will lay out all children in a row */
 	justify-content: space-around; /* This will space out the progress bars evenly */
 	align-items: center; /* This will align the progress bars vertically */
+    margin-top: 30px;
   }
 
 
@@ -210,15 +212,6 @@ table td {
     cursor: pointer;
     margin-top: 10px;
   }
-  
-
-  
-
-
-
-
-
-
 
 
   .chart-container {
@@ -257,10 +250,10 @@ table td {
     width: 100%;
     max-width: 600px; /* Adjust to the maximum width you want */
     align-items: flex-end;
-    height: 300px; /* Adjust to the desired height */
     border-bottom: 2px solid black; /* X-axis line */
     height: 300px; /* Adjust to control the width of the bar container */
-  margin: 0 auto; /* Center the container on the page */
+    margin-top: 240px;
+    margin-left: 60px;
 }
   
   
@@ -288,20 +281,27 @@ table td {
 
   .container1 {
 	display: flex; /* Changed from table to flex */
+    flex-direction: column;
 	justify-content: space-around; /* This will space out the two sections evenly */
 	align-items: stretch; /* This will make sure both sections stretch to the same height */
 	width: 100%; /* Take up full width of the screen */
 	max-width: none; /* Remove any max-width if it exists */
   }
   .width-50, .chart-container {
-	width: 50%; /* Each section will take up half of the container's width */
+	width: 40%; /* Each section will take up half of the container's width */
 	/* Remove float: left; if it exists for these classes */
   }
   
   /* Remove any margins or paddings that might cause overflow or not needed */
   .width-50, .chart-container {
-	margin: 0;
+	margin: 30px;
 	padding: 0;
+  }
+
+  .skills__progress {
+    display: flex;
+    flex-direction: row;
+    
   }
 
 
@@ -461,4 +461,58 @@ table td {
 .service-list p {
 	font-size: 15px;
 	line-height: 25px;
+}
+
+.width-50 {
+    margin-top: 50px;
+}
+
+.container__about{
+    display: flex;
+    width: fit-content;
+    flex-direction: row;
+    justify-content: center;
+    margin: 60px;
+}
+
+.content__about {
+    font-size: large;
+    margin-bottom: 30px;
+}
+
+.content__about > h1 {
+    color: #ffbf35;
+}
+
+.about__nav {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 300px;
+}
+
+.about__nav > a {
+    text-decoration: none;
+    color: white;
+    padding: 15px;
+    font-size: 15px;
+}
+
+.main__about {
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+
+}
+
+.main__about li {
+    font-size: large;
+    line-height: 30px;
+    list-style: none;
+}
+
+.image__about {
+    object-fit:contain;
+    height: 420px;
+    margin-top: 35px;
+    border-radius: 5%;
 }
