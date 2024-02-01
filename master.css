@@ -10,7 +10,7 @@ html, body
 	{
 	font-size: 14px;
 	font-weight: 400;
-	background: #0c0132;
+	background: url("colorful.jpg"), #000;
 	color: #fff;
 }
 .container {
@@ -144,22 +144,6 @@ table td {
 }
 /*****SKILL SECTION*****/
 /*****SKILL SECTION*****/
-.skills-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap; /* This allows items to wrap to the next line as needed */
-    justify-content: space-around; /* This spaces out the children evenly */
-    align-items: flex-start; /* This aligns items to the top of the container */
-    height: 100vh; /* This sets the height of the container to the height of the viewport */
-    padding: 20px; /* This adds some space inside the container */
-    box-sizing: border-box;
-    margin-bottom: 20px /* This ensures padding is included in the height calculation */
-  }
-  
-  .skill-section {
-    width: 45%; /* This sets the width of each section to less than half the container's width */
-    margin: 10px; /* This adds some space around each section */
-  }
   
   /* Continue with other styles... */
   
@@ -187,15 +171,24 @@ table td {
 	float: left;
 }
 
-div[role="progressbar"] {
+.progress-container {
+	display: flex;
+	flex-direction: row; /* This will lay out all children in a row */
+	justify-content: space-around; /* This will space out the progress bars evenly */
+	align-items: center; /* This will align the progress bars vertically */
+  }
+
+
+
+  .progressbar  {
 	color: #ffbf35;
-	margin-left: 100px;
-	margin-bottom: 20px;
+	margin:0 10px;
 	width: 100px;
-	;
+	
 	height: 100px;
-	;
+	
 	border-radius: 50%;
+
 
 	place-items: center;
 	display: grid;
@@ -218,16 +211,26 @@ div[role="progressbar"] {
     margin-top: 10px;
   }
   
+
+  
+
+
+
+
+
+
+
+
   .chart-container {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center the chart in the middle of the screen */
-    padding-top: 10px; /* Space above the chart */
+    align-items: right; /* Center the chart in the middle of the screen */
+    padding-top: 20px; /* Space above the chart */
     border-top: 2px solid black; /* Y-axis line */
     position: relative;
     width: 80%; /* Adjust to the desired width */
     max-width: 800px; /* Adjust to the maximum width you want */
-    margin: auto; /* This will center the container */
+    margin: right; /* This will center the container */
   }
   
   
@@ -244,7 +247,7 @@ div[role="progressbar"] {
   
   .y-axis span {
     position: relative;
-    left: 5px; /* Adjust based on your layout */
+    left: 10px; /* Adjust based on your layout */
 
   }
   
@@ -283,10 +286,27 @@ div[role="progressbar"] {
   
   }
 
+  .container1 {
+	display: flex; /* Changed from table to flex */
+	justify-content: space-around; /* This will space out the two sections evenly */
+	align-items: stretch; /* This will make sure both sections stretch to the same height */
+	width: 100%; /* Take up full width of the screen */
+	max-width: none; /* Remove any max-width if it exists */
+  }
+  .width-50, .chart-container {
+	width: 50%; /* Each section will take up half of the container's width */
+	/* Remove float: left; if it exists for these classes */
+  }
+  
+  /* Remove any margins or paddings that might cause overflow or not needed */
+  .width-50, .chart-container {
+	margin: 0;
+	padding: 0;
+  }
+
+
   /*****EXPERIENCE SECTION*****/
-.bg-lightgrey {
-	background-color: #1a1a1a;
-}
+
 .edu-exp {
 	padding: 10px 0px;
 	width: 48%;
@@ -410,4 +430,35 @@ div[role="progressbar"] {
 
 .testimonial-name p {
 	font-size: 16px;
+}
+
+
+/*SERVICE SECTION*/
+/*SERVICE SECTION*/
+
+.service-list {
+	padding: 40px;
+	margin-top: 35px;
+	background: #262626;
+	border-radius: 15px;
+	width: 94%;
+	float: left;
+}
+
+.service-list i {
+	font-size: 50px;
+	color: #ffbf35;
+	width: 70px;
+	float: left;
+}
+
+.service-list h3 {
+	font-size: 18px;
+	margin-top: 8px;
+	margin-bottom: 15px;
+}
+
+.service-list p {
+	font-size: 15px;
+	line-height: 25px;
 }

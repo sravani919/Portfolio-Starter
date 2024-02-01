@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Sravani Pati</title>
+    <link rel="stylesheet" href="project.css">
+    <!-- Add additional head elements here -->
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="index.html">
+            <span class="span-col">Home</span>
+          </a>
+          <a href="about.html">About </a>
+          <a href="certificates.html">Certificates </a>
+          <a href="education.html">Education</a>
+          <a href="Skills.html">My Skills</a>
+          <a href="projects.html">Portfolio</a>
+          <a href="testimonal.html">Testimonial</a>
+          <a href="Projects1.html">Projects</a>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <section class="project-section">
+            <h1>My Projects</h1>
+            <!-- Project 1 -->
+           
+            <!-- Repeat this block for each project, make sure to change the IDs and function parameters accordingly -->
+            <div class="project">
+                <h2>TikTok Classification Project(2024)</h2>
+                <img src="Tiktok.jpg" alt="Project Image" class="project-image">
+                <button onclick="toggleDetails('project1-details')">Click here to view Tiktok Classification  project details</button>
+                <div id="project1-details" class="project-details" style="display:none;">
+                    <!-- Detailed content about project 1 -->
+                    <h3>TikTok Classification</h3>
+                    <p>I employed the PACE (Project, Analyze, Communicate, Execute) strategy across the six steps, systematically addressing questions, detailing actions, and ensuring a comprehensive approach to the TikTok claims classification project. I navigated through project milestones, built a data frame, conducted exploratory data analysis, tested hypotheses, developed a regression model, and created the final machine learning model for TikTok's claims classification project. These steps involved planning, data cleaning, stakeholder engagement, and model building, showcasing my proficiency in various facets of advanced data analytics within a realistic workplace scenario.</p>
+                    
+                    
+                    <h2>Milestone 1:</h2>
+                    <h3>Project Proposal and Milestones</h3>
+
+                       <p>The purpose is to develop a machine learning model for claims classification on TikTok, aiming to automate the identification of claims and opinions in user-generated content. This will enhance content moderation efficiency, improve the user experience, optimize resource allocation, and strengthen platform trust by ensuring a safer and more positive environment.</p>
+                       <p> <strong>Objective:</strong> Organize project tasks, classify tasks using the PACE workflow, and identify relevant stakeholders for the claims classification project.</p>
+                       <p><strong>Key Deliverables:</strong>Project proposal outlining milestones, PACE classification, and stakeholder identification.
+                       </p> 
+                       
+                       
+                       <!-- You can include more images here -->
+                       <p><strong>Project Documents:</strong></p>
+                       <a href="Activity _ TikTok project proposal (1).pdf" target="_blank">Project Proposal PDF</a>
+                       <br>
+                       <a href="Activity Template_ Course 1 PACE strategy document (1).pdf" target="_blank">Project Activity Template PDF</a>
+                       
+                       <!-- ... -->
+                   <h2>Milestone 2:</h2>
+                   <h3>Building Data Frame and Descriptive Statistics</h3>
+                           <p> <strong>Objective:</strong> Build a data frame for the TikTok dataset, examine the data types of each column, and gather descriptive statistics.</p>
+                            <p><strong>Key Deliverables:</strong>Completed data frame and descriptive statistics for exploratory data analysis (EDA).</p> 
+                            <br>
+                            <p>The Purpose of this project is to investigate and understand the data provided. 
+                             <br>
+                                1.   Acquaint you with the data
+                                <br>
+                                
+                                2.   Compile summary information about the data
+                                <br>
+                                3.   Begin the process of EDA and reveal insights contained in the data
+                                <br>
+                                4.   Prepare you for more in-depth EDA, hypothesis testing, and statistical analysis
+                                <br>
+                                <br>
+                                The goal is to construct a dataframe in Python, perform a cursory inspection of the provided dataset, and inform TikTok data team members of your findings.
+                                <br>
+                                
+                                <h3>This Milestone has three parts:</h3>
+                                <br>
+                                
+                               <strong> Part 1:</strong> Understand the situation<br>
+                                1. How can you best prepare to understand and organize the provided TikTok information?
+                                <br>
+                               <strong> Part 2:</strong>Understand the data
+                               <br> 
+                                1.Create a pandas dataframe for data learning and future exploratory data analysis (EDA) and statistical activities
+                                <br>
+                                2.Compile summary information about the data to inform next steps
+                                <br>
+                                <strong>Part 3:</strong> Understand the variables
+                                <br>
+                                1.Use insights from your examination of the summary data to guide deeper investigation into variables
+                                
+                                <br/>
+                                
+                                </p>
+                            
+                            <img src="Screenshot 2024-01-27 224843.png" alt="Code Screenshot" class="code-image">
+                            <p class="image-label"> <strong>Sample Data</strong></p>
+                           <h3>Calculated the mean video share count of ban status to understand the data</h3>
+                           <img src="Screenshot 2024-01-27 225901.png" alt="Code screenshot" class-"code-image">
+                           <p class ="image-label"><Strong>Video share count mean</Strong></p>  
+                           <p><strong>Project Documents:</strong></p>
+
+                           <br>
+                           <p><strong>Key Insights:</strong>Out of the 19,382 samples in this dataset, claims constitute just under 50%, specifically 9,608 instances. There is a notable strong correlation between claim status and engagement level, warranting further investigation. Moreover, videos with banned authors exhibit significantly higher engagement compared to videos with active authors, while videos with authors under review fall between these two categories in terms of engagement levels.</p>
+                            
+                            <a href="Activity Template_ Course 2 PACE strategy document.pdf" target="_blank">Pace stratergy PDF</a>
+                            <br>
+                            <a href="Activity _ TikTok Course 2 executive summary.pdf" target="_blank">Executive summary PDF</a>
+                            <br>    
+
+
+                   <h2>Milestone 3:</h2>
+                   <h3>Exploratory Data Analysis and Data Cleaning:</h3>
+                           <p> <strong>Objective:</strong> Conduct EDA on claims classification data, select and build visualizations, and create plots to visualize variables and relationships..</p>
+                            <p><strong>Key Deliverables:</strong>EDA results and visualizations were shared with the TikTok team..</p> 
+                            
+                           <br>
+                            <p>The purpose of this project is to conduct exploratory data analysis on a provided data set. My mission is to continue the investigation I began in Milestone 2 and perform further EDA on this data with the aim of learning more about the variables. Of particular interest is information related to what distinguishes claim videos from opinion videos.
+                        
+                                <br>
+                                The goal is to explore the dataset and create visualizations.
+                                <br>
+                                <h3>This Milestone has 4 parts:</h3>
+                                <br>
+                               <strong> Part 1: </strong>Imports, links, and loading
+                               <br>
+                               <strong>Part 2: </strong>Data Exploration
+                               and  Data cleaning
+                                
+                                 <br>
+                                <strong> Part 3:</strong> Build visualizations
+                                <br>
+                                <strong> Part 4:</strong> Evaluate and share results</p>
+                                <br>
+                            <h3>Created histogram to show claims by verification status</h3>
+                            <br>
+                            <img src="claim status.png" alt="Code Screenshot" class="code-image">
+                
+                            <p class="image-label"><strong>bar chart </strong></p>
+                            <br>
+                            <p>There are far fewer verified users than unverified users, but if a user *is* verified, they are much more likely to post opinions.</p>
+                            <br>
+                            <h3>Created histogram to show claims status by author ban status</h3>
+                           <img src="Author ban status.png" alt="Code Screenshot" class="code-image">
+                            <p class="image-label"><strong>Count of each claim status</strong> </p>
+
+                            <br>
+                            <p>For both claims and opinions, there are many more active authors than banned authors or authors under review; however, the proportion of active authors is far greater for opinion videos than for claim videos. Again, it seems that authors who post claim videos are more likely to come under review and/or get banned.</p>
+                            <br>
+                            <h3>Created Scatterplot from the data to differentiate between claims status and opinion status</h3>
+                           <img src="Scatterplot.png" alt="Code Screenshot" class="code-image">
+                            <p class="image-label"><strong>Scatter plot </strong></p>
+                            <br>
+                            <p><strong>Key Insights:</strong>1.I examined the data distribution/spread, count frequencies, mean and median values, extreme values/outliers, missing data, and more. I analyzed correlations between variables, particularly between the claim_status variable and others. <br>
+                              2.    I want to further investigate distinctive characteristics that apply only to claims or only to opinions. Also, I want to consider other variables that might be helpful in understanding the data.
+                            </p>
+                            
+                            <br>
+
+                            <p><strong>Project Documents:</strong></p>
+
+                            <a href="Activity Template_ Course 3 PACE strategy document.pdf" target="_blank">Pace stratergy PDF</a>
+                           <br>
+                            <a href="Activity _ TikTok Course 3 executive summary.pdf" target="_blank">Executive summary PDF</a>
+                            
+                            
+                          
+                        <h2>Milestone 4:</h2>
+                        <h3>Hypothesis testing</h3>
+                                    <p> <strong>Objective:</strong>Conduct hypothesis testing on the claims classification data to determine the best method for the project.</p>
+                                     <p><strong>Key Deliverables:</strong>Results of hypothesis testing insights into TikTok's user claim dataset.</p> 
+                                     
+                                    <br>
+                                     <p>The purpose of this project is to demostrate knowledge of how to prepare, create, and analyze hypothesis tests.
+                                        <br>
+                                        
+                                        The goal is to apply descriptive and inferential statistics, probability distributions, and hypothesis testing in Python.
+                                        <br>
+                                        
+                                        <h3>This Milestone has three parts:</h3>
+                                        
+                                        <strong> Part 1: </strong>Imports and data loading<br>
+                                        * What data packages will be necessary for hypothesis testing?
+                                        <br>
+                                        <br>
+                                        <strong> Part 2:</strong> Conduct hypothesis testing
+                                        <br>
+                                        <br>
+                                        * How will descriptive statistics help you analyze your data?
+                                        <br>
+                                        * How will you formulate your null hypothesis and alternative hypothesis?
+                                        <br>
+                                        <strong> Part 3: </strong>Communicate insights with stakeholders
+                                        <br>
+                                        <br>
+                                        * What key business insight(s) emerge from your hypothesis test?
+                                        <br>
+                                        * What business recommendations do you propose based on your results?
+                                        
+                                        <br> </p>
+                                     <br>
+                                     <h3>Conducted hypothesis testing by choosing 5% of significance level and perfomed two sample t_test</h3>
+                                     <img src="Hypothesis.png" alt="Code Screenshot" class="code-image">
+                                     <br>
+                                     <p>
+                                        Due to the exceptionally low p-value (far below the 5% significance level), the null hypothesis is rejected. The inference drawn is that a statistically significant disparity exists in the mean video view count between TikTok accounts with verification status and those without.</p>
+                                     
+         
+                                     <p><strong>Project Documents:</strong></p>
+
+                                     <br>
+                                     <p><strong>Key Insights:</strong>The analysis reveals a significant statistical difference in average view counts between videos from verified and unverified accounts, indicating potential fundamental behavioral distinctions. Exploring the root causes of this difference is imperative, considering factors like content type or associations with spam bots. The subsequent phase involves constructing a logistic regression model on verified_status to predict user behavior accurately, addressing the skewed data and significant account type differences.</p>
+         
+                                     <a href="Activity Template_ Course 4 PACE strategy document.pdf" target="_blank">Pace stratergy PDF</a>
+                                    <br>
+                                     <a href="Activity _ TikTok Course 4 executive summary.pdf" target="_blank">Executive summary PDF</a>
+                         
+                                     
+
+                        <h2>Milestone 5:</h2>
+                        <h3>Regression Model Building</h3>
+                            <p> <strong>Objective:</strong>Create a regression model for the claims classification data, evaluate the model, and interpret results for cross-departmental stakeholders.</p>
+                            <p><strong>Key Deliverables:</strong>Regression model, evaluation, and summarized findings for stakeholders within TikTok.</p> 
+                                                  
+                            <br>
+                            <p>The purpose of this project is to demostrate knowledge of EDA and regression models.
+
+                                The goal is to build a logistic regression model and evaluate the model.
+                                <br>
+                                <h3>This activity has three parts:</h3>
+                                <br>
+                                <strong> Part 1:</strong> EDA & Checking Model Assumptions
+                                <br>
+                                <br>
+                                * What are some purposes of EDA before constructing a logistic regression model?
+                                <br>
+                                <strong> Part 2:</strong> Model Building and Evaluation
+                                <br>
+                                <br>
+                                * What resources do you find yourself using as you complete this stage?
+                                <br>
+                                <strong> Part 3: </strong>Interpreting Model Results
+                                <br>
+                                <br>
+                                * What key insights emerged from your model(s)?
+                                <br>
+                                * What business recommendations do you propose based on the models built? </p>
+                                <br>
+
+                             <h3>Created stacked histograms to visualize the text_length for both verified and unverified accounts </h3>
+                            <img src="Seaborn.png" alt="Code Screenshot" class="code-image">
+                            <br>
+                            <h3>Encoding categorical features in the training set</h3>
+                            <img src="encoding training data.png" alt="Code Screenshot" class="code-image">
+                            <br>
+                            <h3>Created correlation using heat map</h3>
+                            <img src="correlationheatmap.png" alt="Code Screenshot" class="code-image">
+                            <br>
+                            <p>we could exclude video_like_count. And among the variables that quantify video metrics, you could keep video_view_count, video_share_count, video_download_count, and video_comment_count as features.</p>
+                            <br>
+                            <h3>Created confusion Matrix to visualize the results of Logistic Regression model</h3>
+                            <img src="logistic regression model.png" alt="Code Screenshot" class="code-image">
+                            <br>
+                            <h3>Classification report to show precision</h3>
+                            <img src="classification report.png" alt="Code Screenshot" class="code-image">
+                            <br>
+                            <p><strong>Key Insights:</strong>The dataset contains strongly correlated variables, prompting the exclusion of "video_like_count" to address potential multicollinearity issues in logistic regression. The model indicates that each additional second of the video corresponds to a 0.009 increase in the log-odds of a user having verified status, with acceptable predictive power reflected in a precision of 61%, a good recall of 84%, and overall accuracy within an acceptable range.</p>
+                                                   
+                                                   
+                        <h2>Milestone 6:</h2>
+                        <h3>Final Machine Learning model</h3>
+                                <p> <strong>Objective:</strong>Lead the final tasks of the claims classification project, including feature engineering, model development, and evaluation.
+                                  </p>
+                                <p><strong>Key Deliverables:</strong>Machine learning model, evaluation results, and an executive summary for cross-departmental stakeholders.</p> 
+                                                      
+                                <br>
+                                <p>TikTok users can report videos that they believe violate the platform's terms of service. Because there are millions of TikTok videos created and viewed every day, this means that many videos get reported&mdash;too many to be individually reviewed by a human moderator.
+
+                                    Analysis indicates that when authors do violate the terms of service, they're much more likely to be presenting a claim than an opinion. Therefore, it is useful to be able to determine which videos make claims and which videos are opinions.
+                                    
+                                    TikTok wants to build a machine learning model to help identify claims and opinions. Videos that are labeled opinions will be less likely to go on to be reviewed by a human moderator. Videos that are labeled as claims will be further sorted by a downstream process to determine whether they should get prioritized for review. For example, perhaps videos that are classified as claims would then be ranked by how many times they were reported, then the top x% would be reviewed by a human each day.
+                                    
+                                   
+                             A machine learning model would greatly assist in the effort to present human moderators with videos that are most likely to be in violation of TikTok's terms of service. </p>
+                              
+                                 <br>
+                                 <p>Previous work with this data has revealed that there are ~20,000 videos in the sample. This is sufficient to conduct a rigorous model validation workflow, broken into the following steps:
+
+                                1. Split the data into train/validation/test sets (60/20/20)
+                                2. Fit models and tune hyperparameters on the training set
+                                3. Perform final model selection on the validation set
+                                4. Assess the champion model's performance on the test set</p>
+
+                                <h3>Model Workflow</h3>
+                                <img src="modelWorkflow.png" alt="Code Screenshot" class="code-image">
+
+                                <h3>What are the ethical implications of building the model?</h3>
+                                <p>In the given scenario, it's better for the model to predict false positives when it makes a mistake, and worse for it to predict false negatives. It's very important to identify videos that break the terms of service, even if that means some opinion videos are misclassified as claims. The worst case for an opinion misclassified as a claim is that the video goes to human review. The worst case for a claim that's misclassified as an opinion is that the video does not get reviewed _and_ it violates the terms of service. A video that violates the terms of service would be considered posted from a "banned" author, as referenced in the data dictionary.</p>
+                                <br>
+                                <p>Built a random forest model to the training set. Used cross-validation to tune the hyperparameters and select the model that performs best on recall.</p>
+                                
+                                
+                                <h3>Random Forest Score</h3>
+                                <img src="RandomforestScore.png" alt="Code Screenshot" class="code-image">
+                                <p>This model performs exceptionally well, with an average recall score of 0.995 across the five cross-validation folds. After checking the precision score to be sure the model is not classifying all samples as claims, it is clear that this model is making almost perfect classifications.</p>
+
+
+                               <br>
+
+                                <h3>XGboostScore</h3>
+                                <img src="XGBbestscore.png" alt="Code Screenshot" class="code-image">
+                                <P>This model also performs exceptionally well. Although its recall score is very slightly lower than the random forest model's, its precision score is perfect.</P>
+                            <br>
+
+                                <h3>Created confusion Matrix to visualize the results of Classification  model</h3>
+                                <img src="Confusion matrixrandomforest.png" alt="Code Screenshot" class="code-image">
+                                <P>The upper-left quadrant displays the number of true negatives: the number of opinions that the model accurately classified as so.
+
+                                    The upper-right quadrant displays the number of false positives: the number of opinions that the model misclassified as claims.
+                                    
+                                    The lower-left quadrant displays the number of false negatives: the number of claims that the model misclassified as opinions.
+                                    
+                                    The lower-right quadrant displays the number of true positives: the number of claims that the model accurately classified as so.
+                                    
+                                    A perfect model would yield all true negatives and true positives, and no false negatives or false positives.
+                                    
+                                    As the above confusion matrix shows, this model does not produce any false negatives.</P>
+
+
+                                <h3>Classification report to show precision</h3>
+                                <img src="Screenshot 2024-01-28 143016.png" alt="Code Screenshot" class="code-image">
+                                <P>The classification report above shows that the random forest model scores were nearly perfect. The confusion matrix indicates that there were 10 misclassifications&mdash;five false postives and five false negatives.</P>
+                                
+                                
+                                <h3>XGboostConfusion Matrix to Visualzie results and Classification Report</h3>
+                                <img src="Screenshot 2024-01-28 143233.png" alt="Code Screenshot" class="code-image">
+                                <P>The results of the XGBoost model were also nearly perfect. However, its errors tended to be false negatives. Identifying claims was the priority, so it's important that the model be good at capturing all actual claim videos. The random forest model has a better recall score, and is therefore the champion model.</P>
+                                                  
+                                <h3>using Champion Model to predict on test data</h3>
+                                <img src="Randomforesttestset.png" alt="Code Screenshot" class="code-image">
+
+                                <h3>Feature Importance Of Champion Model</h3>
+                                <img src="champion model.png" alt="Code Screenshot" class="code-image">
+                                <P>The most predictive features all were related to engagement levels generated by the video. This is not unexpected, as analysis from prior EDA pointed to this conclusion.</P>
+
+                                <h3>Model Predictions</h3>
+                                <P>The model's most predictive features were all related to the user engagement levels associated with each video. It was classifying videos based on how many views, likes, shares, and downloads they received.</P>
+                                <br>
+                                <h3>What features would you want to have that would likely improve the performance of your model?</h3>
+                                <p>The current version of the model does not need any new features. However, it would be helpful to have the number of times the video was reported. It would also be useful to have the total number of user reports for all videos posted by each author.</p>
+                                
+                            <p><strong>Project Documents:</strong></p>
+                      
+                            <a href="Activity Template_ Course 6 PACE strategy document.pdf" target="_blank">Pace stratergy PDF</a>
+                            <br>
+                            <a href="Activity Exemplar_ TikTok Course 6 executive summary.pdf" target="_blank">Executive summary PDF</a>
+                            <br>
+
+                            <p>For a detailed view of the code, check out the GitHub repository:</p>
+                            <a href="https://github.com/sravani919/TIkTok-Classification" target="_blank">View the Code on GitHub</a>
+        
+                                                              
+                            <button onclick="closeProjectDetails('project1-details')">Close Project Details</button>
+                            
+                     </div>
+ 
+             </div>
+              <!-- Repeat this block for each project, make sure to change the IDs and function parameters accordingly -->
+             <div class="project">
+                <h2>Failure Point Automation Project(2023)</h2>
+                <img src="Failurepoints.jpg" alt="Project Image" class="project-image">
+                <button onclick="toggleDetails('project2-details')">Click here to view failure Point Automation project details</button>
+                <div id="project2-details" class="project-details" style="display:none;">
+                    <!-- Detailed content about project 1 -->
+                    <h2>Failure Point Automation</h2>
+                    <p>In this project, we integrated machine learning with GIS to automate critical infrastructure risk analysis, enhancing disaster resilience in low-capacity communities through advanced CNN and R-CNN technologies.
+                    </p>
+                    <p><strong>Mission Statement</strong> </p>
+
+
+                       <p> Currently, Clemson Engineers for Developing Communities (CEDC) has a team of students who work on mapping potential failure points of critical infrastructure along the Savannah River Watershed. This process involves going to each piece critical infrastructure on a map and identifying its failure point manually, which is very time intensive. Our team believes this process is a good candidate for automation using machine learning. This will enable current CEDC students to focus on more substantial task than mapping point. Additionally, this could eventually become a tool that low-capacity communities across the country can use to assess their resilience to natural disaster by quickly identifying what critical infrastructure in their community is at risk.​</p>
+                    <!-- You can include more images here -->
+                    <img src="SravaniPoster.jpg" alt="Code Screenshot" class="code-image">
+                    <!-- ... -->
+                    <p><strong>Algorithm selection</strong> </p>
+                    <p>From our literature review, we found research that would help inform the decisions we made later. We discovered that there are Application Programming Interfaces (API) that can help integrate our machine learning algorithm with ArcGIS in the future, which is the application CEDC interns use to map critical infrastructure. We were also able to narrow down what kind of algorithm we wanted to use to address the problem, and eventually decided on a Convolutional Neural Network (CNN), which worked best for our team for multiple reasons. A CNN is an image classification algorithm, which means it simply labels an entire image based on the categories it was trained on. In the long run, we will need to develop this into an object recognition algorithm, which can identify multiple objects in a single image. What makes a CNN perfect for our team is it can easily be developed into a Region-based Convolutional Neural Network (R-CNN), which is an object recognition algorithm that will fulfill the long-term scope of the project. By implementing a CNN with plans to evolve it into a R-CNN, we can establish a working proof-of-concept quickly, and keep the door open in the future for further development.​</p>
+                    <p><strong>Data Collection</strong> </p>
+                    <p>To train a machine learning algorithm, data is required. Since the team opted not to focus on ArcGIS integration in order to prioritize a working proof of concept, we needed to collect the data manually. The team decided to collect images of electrical substations, broadband towers, and public schools. We chose this data because there was a large enough sample for us to feel comfortable training the algorithm, and they look different enough for us to feel confident that an algorithm could differentiate between the points. We collected the data by going through each point on ArcGIS, taking a screenshot, and adding it to a shared dataset. A Google Earth Satellite overlay was used to ensure image clarity.​</p>
+                    <img src="Screenshot 2024-01-27 184544.jpg" alt="Code Screenshot" class="code-image">
+                    <p class="image-label">Sample Data</p>
+                    <p><strong>Algorithm Selection</strong></p>
+                    <p>To implement the algorithm, the initial step involved cleaning, processing, and labeling the data. This ensures that all the data is in the correct format for the machine learning algorithm to train on. Additionally, we implemented data augmentation to increase the sample the algorithm was training on. This process takes the images we collected and creates multiple permutations of each image by flipping and rotating it, essentially increasing the sample size.​
+
+                        Once we implemented the algorithm, we noticed we are not getting the results that are expected. The accuracy of the algorithm is very low, so the next steps are to identify what could be going wrong and refine the code to solve those issues. The team has the following leads on what could be wrong:​
+                        
+                        The data augmentation may not be implemented correctly​
+                        
+                        Data Transfer could be needed to increase the sample size further​
+                        
+                        There are simple implementation errors we have not identified​
+                        
+                        Once we solve the issue, we will continue to test and refine to improve the accuracy.​</p>
+                    <img src="labelling.png" alt="Code Screenshot" class="code-image">
+                    <p class="image-label">Labelling Screenshot</p>
+                    <img src="processing.jpg" alt="Code Screenshot" class="code-image">
+                    <p class="image-label">Preprocessing  Screenshot</p>
+                    <img src="ModelTraining.jpg" alt="Code Screenshot" class="code-image">
+                    <p class="image-label"> ModelTraining Screenshot</p>
+                    <img src="test.jpg" alt="Code Screenshot" class="code-image">
+                    <p class="image-label"> Test Screenshot</p>
+                    <p><strong>Future Steps</strong> </p>
+                    <p>In future semesters, there are a few different areas to focus on to take this project from a proof-of-concept to an application that can be used by low-capacity communities. The most important focus will be integration with ArcGIS. While manually collecting data worked for us to create a proof-of-concept, it is very tedious and defeats the purpose of automating the mapping. For this application to be useful, it needs to be integrated seamlessly with ArcGIS. ​
+                        
+                        Additionally, the team will need to develop the CNN into a R-CNN once the team is comfortable with the accuracy of the CNN. Image classification will not be very helpful for this project in the long-run, as all it can do is categorize an image. We will need to use object recognition in order to provide a more through analysis on each image and identify where the exact failure point of the critical infrastructure is. Finally, we intend to expand this algorithm to beyond just electrical substations, broadband towers, and public schools. This will be challenging because it we will need to find a way to collect the data, but it is necessary to make sure this application is helpful to communities.​</p>
+                    <img src="FPAGroup.jpg" alt="Code Screenshot" class="code-image">
+                    <p class="image-label"> Our Team </p>
+                    <p><strong>Acknowledgements</strong></p>
+                    <p>This work was supported in part by the United States Army Corps of Engineers, and many other sponsors and donors.​
+
+                    </p>
+                    <img src="FPAPoster.jpg.jpeg" alt="Code Screenshot" class="code-image">
+                    <p class="image-label"> Presented on  Fall Summit</p>
+                    
+                    <p><strong>Project Highlights</strong></p>
+                        <p>
+                            As a dedicated group member of the Savannah River Watershed project, I have utilized machine learning and satellite imagery to identify infrastructure vulnerabilities, demonstrating the transformative power of technology in societal advancement.
+                        </p>
+                    <img src="Milestone.jpeg" alt="Code Screenshot" class="code-image">
+                    <p class="image-label"> Group Member Highlight</p>
+                    <img src="Summitposter.jpg" alt="Code Screenshot" class="code-image">
+                    <p class="image-label"> Summit Book Highlight</p>
+                    <p><strong>References</strong></p> 
+                    <p>
+                        <a href="https://doi.org/10.3390/rs14215331" target="_blank">1. https://doi.org/10.3390/rs14215331</a>
+                        <br>
+                        <a href="https://www.run.ai/guides/machine-learning-engineering/machine-learning-automation" target="_blank">2. Machine Learning Automation</a>
+                        <br>
+                        <a href="https://www.researchgate.net/publication/Deep_Learning_for_Critical_Infrastructure_Resilience" target="_blank">3. Deep Learning for Critical Infrastructure Resilience</a>
+                        <br>
+                        <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10041487/" target="_blank">4. NCBI Article PMC10041487</a>
+                        <br>
+                        <a href="https://www150.statcan.gc.ca/n1/pub/18-001-x/18-001-x2021003-eng.htm" target="_blank">5. Statistics Canada Article</a>
+                        <br>
+                        <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9098279/" target="_blank">6. NCBI Article PMC9098279</a>
+                        <br>
+                        <a href="https://medium.com/@northamericangeoscientistsorg/using-python-to-classify-land-cover-from-satellite-imagery-with-convolutional-neural-networks-328fa3ab0180" target="_blank">7. Using Python to Classify Land Cover</a>
+                        <br>
+                        <a href="https://github.com/satellite-image-deep-learning/techniques" target="_blank">8. Satellite Image Deep Learning Techniques</a>
+                    </p>   
+                    
+                    <p>For a detailed view of the code, check out the GitHub repository:</p>
+                    <a href="https://github.com/sravani919/Failure-Point-Automation" target="_blank">View the Code on GitHub</a>
+
+                    <button onclick="closeProjectDetails('project2-details')">Close Project Details</button>
+                            
+                </div>
+ 
+            </div>
+
+            <script>
+        function toggleDetails(detailsId) {
+            var details = document.getElementById(detailsId);
+            var display = details.style.display;
+            if (display === 'none') {
+                details.style.display = 'block';
+            } else {
+                details.style.display = 'none';
+            }
+        }
+    </script>
+    <script>
+        // Universal function to close project details
+        function closeProjectDetails(detailsId) {
+            var details = document.getElementById(detailsId);
+            if (details) {
+                details.style.display = 'none';
+            }
+        }
+    </script>
+    
+      
+     
+       
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!-- Repeat this block for each project, make sure to change the IDs and function parameters accordingly -->
+<div class="project">
+    <h2>Pizza Store (2023)</h2>
+    <img src="Pizza.jpg" alt="Project Image" class="project-image">
+    <button onclick="toggleDetails('project3-details')">Click here to view Pizza Store project details</button>
+    <div id="project3-details" class="project-details" style="display:none;">
+        <!-- Detailed content about project 1 -->
+        <h2>Pizza Store</h2>
+        <p>In this project, I designed a database for Pizzas-R-Us, incorporating an Enhanced ER model to manage pizza orders, toppings, customers, and discounts. I created SQL scripts to build and populate the MySQL database, implemented standard views for reporting purposes, and used Java to develop a command-line application for report generation and profitability analysis.
+        </p>
+        <p><strong>First Part</strong> </p>
+
+        <br>
+           <p> In the initial part of the project, We designed an Enhanced Entity-Relationship Diagram (ERD) using Crow's Foot notation to represent the Pizzas-R-Us database, capturing key entities like pizzas, orders, toppings, customers, and discounts, along with their relationships and attributes.</p>
+            <!-- You can include more images here -->
+            <br>
+        <img src="Firstpart.png" alt="Code Screenshot" class="code-image">
+        <p class="image-label"><strong>Pizza ERD</strong></p>
+        <br>
+
+        <h3>Second Part</strong></h3>
+        <br>
+        <p>After establishing the Entity-Relational Model, we crafted SQL code to define and display views from the data we have. This SQL implementation allows for a structured data representation, facilitating efficient querying and providing valuable insights through customized perspectives on the underlying data model.</p>
+
+        <br>
+
+        <h3>Topping popularity </h3>
+        <br>
+        <p>In the project's second part, I initially created an SQL script to generate three standard views, one of which is the "ToppingPopularity" view. This view ranks all the toppings, considering extra toppings, from most popular to least popular.
+        </p>
+        <br>
+
+    
+        <img src="ToppingPopularityview.png" alt="Code Screenshot" class="code-image">
+        <br>
+        <p class="image-label"><strong>Topping Popularity View</strong></p>
+        <br>
+
+        <h3>Profit by Pizza </h3>
+        <br>
+        <p>As for the second view in the project's second part, I implemented "ProfitByPizza." This view summarizes profits based on pizza size and crust type, sorted in descending order of profitability, over a specified period.
+        </p>
+        <br>
+
+        <br>
+        <img src="profitbypizza.png" alt="Code Screenshot" class="code-image">
+        <br>
+        <p class="image-label"><strong>Profit by Pizza View</strong></p>
+        <br>
+        
+        <h3>Profit by Order Type </h3>
+        <br>
+        <p>In the third view of my project, "ProfitByOrderType," I created a summary of profits for each of the three types of orders, organized by month. Additionally, it includes a total of earnings across all charges at the pizzeria, ordered by customer type and profit.
+        </p>
+        <br>
+       
+
+        <img src="Profitbyordertype.png" alt="Code Screenshot" class="code-image">
+        <br>
+        <p class="image-label"><strong>Profit by Order Type View</strong></p>
+        <br>
+
+        <h3>Third Part </h3>
+        <br>
+        <p>We implemented a Java application for Pizzas-R-Us, allowing users to manage orders, customers, and inventory in their pizzeria database. The application provides features like order creation, customer management, order viewing, marking orders as complete, inventory tracking, and generating profitability reports. It ensures data security using PreparedStatements and adheres to a modular structure within the provided framework, connected to a MySQL database via JDBC.</p>
+        <br>
+
+
+
+
+          <p>For a detailed view of the code, check out the GitHub repository:</p>
+        <a href="https://github.com/sravani919/DBMS" target="_blank">View the Code on GitHub</a>
+
+        <button onclick="closeProjectDetails('project3-details')">Close Project Details</button>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+<!-- Scripts -->
+<script>
+    function toggleDetails(detailsId) {
+        var details = document.getElementById(detailsId);
+        var display = details.style.display;
+        if (display === 'none') {
+            details.style.display = 'block';
+        } else {
+            details.style.display = 'none';
+        }
+    }
+</script>
+<script>
+    // Universal function to close project details
+    function closeProjectDetails(detailsId) {
+        var details = document.getElementById(detailsId);
+        if (details) {
+            details.style.display = 'none';
+        }
+    }
+</script>

@@ -1,0 +1,228 @@
+{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	-outline: 0;
+	font-family Roboto, sans-serif, arial;
+}
+html, body 
+	{
+	font-size: 14px;
+	font-weight: 400;
+	background: #0c0132;
+	color: #fff;
+}
+.container {
+	width: 1100px;
+	margin: 0px auto;
+	display: table;
+}
+.width-33 {
+	width: 33%;
+	float: left;
+}
+.width-66 {
+	width: 66%;
+	float: left;
+}
+/*****MENU SECTION*****/
+.main-panel {
+	width: 100%;
+	float: left;
+	padding-top: 20px;
+	padding-bottom: 50px;
+	height: 100vh;
+}
+
+.logo {
+	font-size: 40px;
+	font-weight: 600;
+}
+
+.span-col {
+	color: #ffbf35;
+}
+
+nav {
+	float: right;
+}
+
+nav a {
+	text-decoration: none;
+	font-size: 16px;
+	font-weight: 500;
+	margin-left: 20px;
+	color: white;
+}
+/*****Main BANNER*****/
+.width-50 {
+	float: left;
+	width: 50%;
+}
+.banner-section {
+	width: 100%;
+	float: left;
+	margin-top: 25vh;
+}
+.banner-section h1 {
+	font-size: 48px;
+	margin-top: 10px;
+	font-weight: bolder;
+}
+.banner-section h2 {
+	font-size: 20px;
+	line-height: 25px;
+	margin-top: 10px;
+	font-weight: 400;
+}
+.banner-section a {
+	float: left;
+	text-decoration: none;
+	font-size: 18px;
+	margin-top: 20px;
+	border-radius: 50%;
+	text-align: center;
+	border: 2px solid #ffbf35;
+	color: #ffbf35;
+	margin-left: 10px;
+	height: 50px;
+	width: 50px;
+	line-height: 50px;
+}
+
+  
+
+
+
+
+
+  
+.skill {
+	margin-top: 30px;
+	font-size: 17px;
+}
+
+.skill span {
+	float: right;
+}
+
+.skill div {
+	width: 100%;
+
+	float: left;
+	margin-top: 5px;
+	background: #e7e7e7;
+	border-radius: 10px;
+ 
+}
+.skill div span {
+	background: #ffbf35;
+	height: 5px;
+	float: left;
+}
+
+
+
+
+
+
+div[role="progressbar"] {
+	color: #ffbf35;
+	margin-left: 100px;
+	margin-bottom: 20px;
+	width: 100px;
+	;
+	height: 100px;
+	;
+	border-radius: 50%;
+
+	place-items: center;
+	display: grid;
+
+	--pgPercentage: var(--value);
+	background: radial-gradient(closest-side, black 80%, transparent 0 99.9%, black 0),
+		conic-gradient(#ffbf35 calc(var(--pgPercentage) * 1%), #ffe6af 0);
+
+}
+
+  
+.toggle-button {
+    /* Styling for the toggle button */
+    background-color: #ffbf35; /* Example background color */
+    border: none;
+    color: rgb(7, 2, 2);
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+
+  
+
+  .chart-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the chart in the middle of the screen */
+    padding-top: 10px; /* Space above the chart */
+    border-top: 2px solid black; /* Y-axis line */
+    position: relative;
+    width: 80%; /* Adjust to the desired width */
+    max-width: 800px; /* Adjust to the maximum width you want */
+    margin: auto; /* This will center the container */
+  }
+  
+  
+  .y-axis {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0;
+  }
+  
+  .y-axis span {
+    position: relative;
+    left: 5px; /* Adjust based on your layout */
+
+  }
+  
+  .bars-container {
+    display: flex;
+    justify-content: space-between; /* This will distribute bars with space in between */
+    width: 100%;
+    max-width: 600px; /* Adjust to the maximum width you want */
+    align-items: flex-end;
+    height: 300px; /* Adjust to the desired height */
+    border-bottom: 2px solid black; /* X-axis line */
+    height: 300px; /* Adjust to control the width of the bar container */
+  margin: 0 auto; /* Center the container on the page */
+}
+  
+  
+  .bar {
+    width: 20px; /* Initial width of each bar */
+    background-color: #ffbf35; /* Color of bars */
+    display: flex;
+  justify-content: center;
+  position: relative;
+  margins: 0 5 px;
+}
+  
+  .bar span {
+    writing-mode: horizontal-tb;
+    text-orientation: upright;
+    transform: rotate(0deg);
+    position: absolute;
+    bottom: -30px; /* Adjust as needed to place labels below bars */
+    left: 50%;
+    transform: translateX(-50%);
+    color: yellow; /* Set the color of the labels */
+    font-size: 14px; /* Adjust font-size as needed */
+  
+  }
+
+  
