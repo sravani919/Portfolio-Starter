@@ -101,7 +101,7 @@ nav a {
 .main-section {
 	width: 100%;
 	float: left;
-	padding: 110px 0px 110px 0px;
+	padding: 0px 0px 110px 0px;
 }
 .width-100 {
 	width: 100%;
@@ -115,7 +115,6 @@ nav a {
 	float: left;
 	font-size: 35px;
 	text-align: center;
-	margin-bottom: 50px;
 	color: #ffbf35;
 }
 
@@ -217,43 +216,34 @@ table td {
   .chart-container {
     display: flex;
     flex-direction: column;
-    align-items: right; /* Center the chart in the middle of the screen */
+    justify-content: flex-start;
     padding-top: 20px; /* Space above the chart */
     border-top: 2px solid black; /* Y-axis line */
     position: relative;
     width: 80%; /* Adjust to the desired width */
     max-width: 800px; /* Adjust to the maximum width you want */
     margin: right; /* This will center the container */
+    margin-top: 50px;
   }
   
   
   .y-axis {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 100%;
+    height: 440px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 0;
   }
-  
-  .y-axis span {
-    position: relative;
-    left: 10px; /* Adjust based on your layout */
 
-  }
-  
   .bars-container {
     display: flex;
-    justify-content: space-between; /* This will distribute bars with space in between */
+    justify-content: space-around; /* This will distribute bars with space in between */
+    align-items: flex-end;
     width: 100%;
     max-width: 600px; /* Adjust to the maximum width you want */
-    align-items: flex-end;
     border-bottom: 2px solid black; /* X-axis line */
-    height: 300px; /* Adjust to control the width of the bar container */
-    margin-top: 240px;
-    margin-left: 60px;
+    height: 440px; /*Adjust to control the width of the bar container */
+    margin-left: 10px;
 }
   
   
@@ -515,4 +505,14 @@ table td {
     height: 420px;
     margin-top: 35px;
     border-radius: 5%;
+}
+
+.chart__group {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+}
+
+.ml_models {
+    margin-top: 15px;
 }
