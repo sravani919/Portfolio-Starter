@@ -10,7 +10,7 @@ html, body
 	{
 	font-size: 14px;
 	font-weight: 400;
-	background: url("colorful.jpg"), #000;
+	background: url("Beautiful-Plain-Website-Background.jpg"), #000;
 	color: #fff;
 }
 .container {
@@ -41,7 +41,7 @@ html, body
 }
 
 .span-col {
-	color: #ffbf35;
+	color: #4791f0;
 }
 
 nav {
@@ -84,8 +84,8 @@ nav a {
 	margin-top: 20px;
 	border-radius: 50%;
 	text-align: center;
-	border: 2px solid #ffbf35;
-	color: #ffbf35;
+	border: 2px solid #4791f0;
+	color: #4791f0;
 	margin-left: 10px;
 	height: 50px;
 	width: 50px;
@@ -115,7 +115,7 @@ nav a {
 	float: left;
 	font-size: 35px;
 	text-align: center;
-	color: #ffbf35;
+	color: #4791f0;
 }
 
 .about-us {
@@ -161,7 +161,7 @@ table td {
  
 }
 .skill div span {
-	background: #ffbf35;
+	background: #4791f0;
 	height: 5px;
 	float: left;
 }
@@ -182,7 +182,7 @@ table td {
 
 
   .progressbar  {
-	color: #ffbf35;
+	color: #4791f0;
 	margin:0 10px;
 	width: 100px;
 	
@@ -196,14 +196,14 @@ table td {
 
 	--pgPercentage: var(--value);
 	background: radial-gradient(closest-side, black 80%, transparent 0 99.9%, black 0),
-		conic-gradient(#ffbf35 calc(var(--pgPercentage) * 1%), #ffe6af 0);
+		conic-gradient(#4791f0 calc(var(--pgPercentage) * 1%), #e7e7e7 0);
 
 }
 
   
 .toggle-button {
     /* Styling for the toggle button */
-    background-color: #ffbf35; /* Example background color */
+    background-color: #4791f0; /* Example background color */
     border: none;
     color: rgb(7, 2, 2);
     padding: 5px 10px;
@@ -249,7 +249,7 @@ table td {
   
   .bar {
     width: 20px; /* Initial width of each bar */
-    background-color: #ffbf35; /* Color of bars */
+    background-color: #4791f0; /* Color of bars */
     display: flex;
   justify-content: center;
   position: relative;
@@ -264,7 +264,7 @@ table td {
     bottom: -30px; /* Adjust as needed to place labels below bars */
     left: 50%;
     transform: translateX(-50%);
-    color: yellow; /* Set the color of the labels */
+    color: #dce3ee; /* Set the color of the labels */
     font-size: 14px; /* Adjust font-size as needed */
   
   }
@@ -323,7 +323,7 @@ table td {
 	font-size: 20px;
 }
 .experience-content h3 {
-	color: #ffbf35;
+	color: #4791f0;
 	font-weight: 500;
 	margin-bottom: 2px;
 	font-size: 17px;
@@ -344,7 +344,7 @@ table td {
 
 .certificate-list i {
 	font-size: 50px;
-	color: #ffbf35;
+	color: #4791f0;
 	width: 70px;
 	float: left;
 }
@@ -364,7 +364,7 @@ table td {
 
 /*****TESTIMONIAL SECTION*****/
 .testimonial {
-	width: 32%;
+	width: 100%;
 	float: left;
 	margin-right: 1%;
 	margin-top: 50px;
@@ -385,7 +385,7 @@ table td {
 }
 
 .testimonial i {
-	color: #ffbf35;
+	color: #4791f0;
 	font-size: 35px;
 	margin-top: 60px;
     
@@ -413,7 +413,7 @@ table td {
 }
 
 .testimonial-name h5 {
-	color: #ffbf35;
+	color: #4791f0;
 	font-size: 20px;
 	margin-top: 10px;
 }
@@ -437,7 +437,7 @@ table td {
 
 .service-list i {
 	font-size: 50px;
-	color: #ffbf35;
+	color: #4791f0;
 	width: 70px;
 	float: left;
 }
@@ -471,7 +471,7 @@ table td {
 }
 
 .content__about > h1 {
-    color: #ffbf35;
+    color: #4791f0;
 }
 
 .about__nav {
@@ -515,4 +515,111 @@ table td {
 
 .ml_models {
     margin-top: 15px;
+}
+
+
+.button-link {
+	display: inline-block;
+	padding: 10px 20px;
+	text-align: center;
+	text-decoration: none;
+	background-color: #3498db; /* Button color */
+	color: #ffffff; /* Text color */
+	border-radius: 5px; /* Rounded corners */
+	transition: background-color 0.3s ease; /* Smooth transition on hover */
+  }
+
+  /* Change button color on hover */
+  .button-link:hover {
+	background-color: #2980b9; /* Darker button color on hover */
+  }
+
+  .project-image {
+	width: 100px; /* Set the width to fill its container */
+	height: 100px; /* Maintain the aspect ratio */
+	object-fit: cover; /* Cover the container while maintaining aspect ratio */
+	border-radius: 8px; /* Optional: Add rounded corners */
+  }
+
+  width-33 {
+	width: 33%;
+  }
+  .heading-color {
+	color: #4791f0; /* Change the color to your desired color */
+  }
+
+  .profile-image {
+    width: 300px; /* Set the width to match font size */
+    height: 350px;
+	/* Set the height to match font size */
+}
+
+ /*CONTACT US SECTION*/
+.contact form {
+	width: 66%;
+	margin: 0px auto;
+}
+.contact input,
+textarea {
+	width: 100%;
+	float: left;
+	margin-bottom: 20px;
+	height: 40px;
+	padding: 10px;
+	border: 1px solid #a1a1a1;
+}
+.contact textarea {
+	height: 80px;
+}
+.contact button {
+	width: 100%;
+	float: left;
+	margin-bottom: 20px;
+	height: 40px;
+	padding: 10px;
+	background: #4791f0;
+	color: #fff;
+	border: none;
+	font-size: 16px;
+}
+.contact h3 {
+	font-size: 26px;
+	text-align: center;
+	margin-top: 60px;
+	color: #4791f0;
+}
+.contact h4 {
+	font-size: 22px;
+	text-align: center;
+	margin-top: 10px;
+}
+.contact p {
+	text-align: center;
+	font-size: 16px;
+	margin-top: 5px;
+}
+/*****FOOTER SECTION*****/
+.footer {
+	background-color: #202020;
+	padding: 30px 0px 40px 0px;
+	width: 100%;
+	float: left;
+}
+.footer-sect {
+	color: #b3b3b3;
+}
+.footer-sect a {
+	color: #b3b3b3;
+	margin-left: 10px;
+	text-decoration: none;
+	font-size: 18px;
+	text-align: center;
+}
+.social-icon a i {
+	width: 50px;
+	height: 50px;
+	border: 1px solid #cdcdcd;
+	line-height: 50px;
+	font-size: 20px;
+	border-radius: 50%;
 }
