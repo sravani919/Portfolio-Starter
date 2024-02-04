@@ -1,0 +1,272 @@
+<!-----META SECTION----->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Student Portfolio Website Template</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="About.css">
+</head>
+<body>
+
+
+
+
+   <!-- Repeat this block for each project, make sure to change the IDs and function parameters accordingly -->
+  <div class="project">
+    <h2>Graduate Admission Prediction using Machine Learning</h2>
+    <img src="GraduateAdmission.jpg" alt="Project Image" class="project-image">
+    <br>
+    <br>
+    <br>
+    <button onclick="toggleDetails('project10-details')">View Project Details</button>
+    <br>
+    <br>
+    <br>
+    <p>For a detailed view of the code, check out the GitHub repository:</p>
+    <br>
+    <a href="https://github.com/sravani919/Graduate-College-Prediction" class="button-link">View the Code on GitHub</a>
+    <br>
+    <br>
+    
+    <a href="Projects1.html" class="button-link">Go Back To Menu</a>
+   
+    <div id="project10-details" class="project-details" style="display:none;">
+        <!-- Detailed content about project 1 -->
+        <h2>Graduate Admission Prediction Using Machine Learning</h2>
+        <p>This project involves predicting the chance of admission to graduate programs using machine learning models. Leveraging features such as CGPA, GRE Score, and TOEFL Score, the analysis identified vital influencers and determined that a Logistic Regression model achieved the highest accuracy of 95%. Further, a threshold adjustment analysis fine-tuned predictions, showcasing the model's adaptability to specific requirements.</p> 
+        <h3>Objective</h3>
+
+        <p>Building upon previous work where three distinct machine learning models were employed to predict the chance of admission for graduate students in software-related master's programs, the current objective is to conduct a comprehensive evaluation to determine the accuracy of each model. The aim is to identify and designate a champion model with superior performance in predicting admission probabilities. This project phase emphasizes refining and selecting the most effective predictive model for better decision-making in the graduate admission process.</p>
+        <br>
+        <h3>Data Exploration</h3>
+        <p>Dataset The dataset comprises 400 samples, each representing a student applying for graduate studies.
+            <br>
+            - Features include GRE Score, TOEFL Score, University Rating, SOP (Statement of Purpose) rating, LOR (Letter of Recommendation) rating, CGPA (Cumulative Grade Point Average), Research experience, and the target variable, 'Chance of Admit.'
+            </p>
+        <br>
+        <h3>Data Preprocessing</h3>
+        <h4>1. Handling Serial No</h4>
+        <p>
+            - Identified 'Serial No.' as an index column for students.
+            <br>
+            - Removed the 'Serial No.' column as it served as an index and did not contribute to the analysis.
+         </p>
+        
+         <br>
+        <h4>
+            2. Handling Column Labels:</h4>
+        <p> - Identified and corrected columns with added spaces in the labels.
+            <br>
+            - Renamed columns 'Chance of Admit ' to 'Chance of Admit' and 'LOR ' to 'LOR.'</p>
+         
+        
+        <br>
+        <h4>
+            3. Cleaning Blank Spaces:</h4>
+        <p>    - I ensured the removal of any additional blank spaces from the dataset.
+            <br>
+            - This step was performed to enhance consistency and avoid potential issues related to column names.</p>
+         
+        <br>
+        <h4>
+            4. Checking for Null Values:</h4>
+        <p>      - Checked for null values in the dataset using `df. isnull().sum()`.
+            <br>
+            - Confirmed that there were no null values in the dataset after preprocessing.
+         </p>
+        <br>
+        <p>The preprocessing steps were crucial for ensuring the dataset's cleanliness, removing unnecessary information, and setting the foundation for subsequent exploratory analysis and machine learning modeling. The dataset is now well-organized, and any potential issues related to column names and missing values have been addressed.
+
+        </p>
+            
+    <h3>Correlation Analysis:</h3>
+    <p>Heatmap: The heatmap illustrated the correlation between CGPA and the chance of admission.
+
+    <br>
+      Insight: A strong positive correlation is observed, indicating that higher CGPA scores positively influence the likelihood of admission.</p>
+      <br>
+      <img src="Screenshot 2024-02-03 172112.png" alt="Code Screenshot" class="code-image">
+      <br>
+      <h3>Conclusion</h3>
+     <p>•	The analysis highlights that CGPA significantly impacts the chance of admission.
+        <br>
+        •	Applicants with higher CGPA scores are more likely to be admitted.
+        <br>
+        Understanding the relationship between CGPA and admission probability will inform the development of machine learning models and contribute to accurate predictions during model training.
+        </p>
+    <h3>Feature-Specific Analysis: GRE Score</h3>
+   <h4>Description:</h4>
+    <p>The Graduate Record Examination (GRE) Score is a standardized test widely used for graduate program admissions. This analysis focuses on the distribution and correlation of GRE scores with the chance of admission.
+        </p>
+
+        <h4>
+            Distribution Analysis:</h4>
+        <p><strong>        
+            Distribution Plot: </strong>The distribution of GRE scores among applicants is depicted in the histogram, revealing the spread and concentration of scores.</p>
+        <br>
+        Insight: </h4>
+        <p><strong>        
+            Distribution Plot: </strong>The GRE scores exhibit a distribution with a mean of 317 and a standard deviation of 11.5. This information provides an overview of applicants' overall performance in the GRE.
+
+        </p>
+       <br>
+        <img src="Screenshot 2024-02-03 172121.png" alt="Code Screenshot" class="code-image">
+        <br>
+
+    <h3>Correlation Analysis:</h3>  
+    <p>
+            Scatter Plot: The scatter plot visualizes the relationship between GRE scores and the chance of admission.
+            <br>
+            Insight: While there is a notable positive correlation, it is observed that the correlation is not as strong as that of CGPA. Applicants with higher GRE scores tend to have an increased chance of admission, but other factors may play a significant role.</p>
+
+            <h3>Conclusion:</h3>
+            <p>- GRE scores contribute to the likelihood of admission, showcasing a positive correlation.
+                <br>
+            - While GRE scores are essential, the analysis suggests that other factors, such as CGPA, might impact the chance of admission.</p>
+            <br>
+            <p>
+            Understanding the relationship between GRE scores and admission probability is crucial for refining machine learning models and enhancing predictive accuracy during model training.</p>
+            <h3>Feature-Specific Analysis: TOEFL Score</h3>
+            <br>
+
+            <h4>Description:</h4>
+            <p>The Test of English as a Foreign Language (TOEFL) Score is a standardized test for non-native English speakers applying to English-speaking universities. This analysis explores the distribution and correlation of TOEFL scores with the chance of admission.</p>
+            <br>
+            <h4>Distribution Analysis:</h4>
+            <p>Distribution Plot: The histogram illustrates the distribution of TOEFL scores, providing insights into the range and concentration of scores.
+                <br>
+            Insight: The TOEFL scores exhibit a mean of 107 and a standard deviation of 6. The distribution reveals the overall performance of applicants in the TOEFL examination.</p>
+
+            <img src="Screenshot 2024-02-03 172239.png" alt="Code Screenshot" class="code-image">
+            <br>
+    <h3> Correlation Analysis:</h3>
+        <p>     
+        Scatter Plot: The scatter plot visualizes the relationship between TOEFL scores and the chance of admission.
+        <br>
+        Insight: Similar to GRE scores, there is a strong positive correlation between TOEFL scores and the likelihood of admission. Higher TOEFL scores are associated with an increased chance of admission.
+        </p>
+        <br>
+        <p>Understanding the impact of TOEFL scores is crucial for developing accurate predictive models, ensuring that this information is appropriately considered during model training.
+
+        <br>  These insights contribute to the comprehensive understanding of the dataset and are essential for informed decision-making in the context of admissions prediction.
+            
+            </p>
+        <br>
+        <img src="Screenshot 2024-02-03 172302.png" alt="Code Screenshot" class="code-image">
+        <br>
+        <p>Let us explore how many applicants have research experience.</p>
+        <br>
+       
+        <br>
+        <p>The majority of applicants have research experience. However, this is the least important feature, so it only matters whether a little has the experience.</p>
+        <br>
+        <p>Let us see the distribution of applicants coming from each kind of university.</p>
+        <br>
+        <img src="Screenshot 2024-02-03 172349.png" alt="Code Screenshot" class="code-image">
+        <br>
+        <p>Most applicants come from tier 3 and tier 2 universities.</p>
+        <br>
+        <p>Conclusion:
+            <br>
+            - TOEFL scores play a significant role in determining the chance of admission, showcasing a strong positive correlation.
+            </p>
+        <br>
+        <h3>Model selection</h3>
+        <br>
+        <p>Now we'll implement machine learning algorithms to predict the chance of admission. We'll use multiple techniques and eventually select the method with the best score. The methods used will be:</p>
+        <br>
+        <h4>Logistic Regression</h4>
+        <img src="Screenshot 2024-02-03 172503.png" alt="Code Screenshot" class="code-image">
+        <br>
+        <h4>Support Vector Machine</h4>
+        <img src="Screenshot 2024-02-03 172533.png" alt="Code Screenshot" class="code-image">
+        <br>
+        <h4>Random Forests</h4>
+        <img src="Screenshot 2024-02-03 172559.png" alt="Code Screenshot" class="code-image">
+        <br>
+       <h3>Comparing Scores</h3>
+       <br>
+       <p>Let us put all the scores in a table and display their scores side-by-side.
+
+       </p>
+       <br>
+       <img src="Screenshot 2024-02-03 172618.png" alt="Code Screenshot" class="code-image">
+       <br>
+       <p>selecting best algorithm
+        <br>
+        Logistic Regression Accuracy: 0.95
+        <br>
+        SVM Accuracy: 0.875
+        <br>
+        Random Forest Accuracy: 0.9 
+        <br>
+        it seems the logistic regression model works well with the data
+        
+        </p>
+        <h3>Threshold Adjustment and Model Evaluation </h3>
+        <br>
+       <h4>Method:</h4>
+       <p>1. Logistic Regression Training
+        <br>
+        2. Threshold Adjustment (0 to 1 with increments of 0.05)
+        <br>
+        3. Performance Metrics: Precision, recall, and accuracy at each threshold.</p>
+
+        <h3>Results</h3>
+        <p>- Threshold: 0.00 - Precision: 0.88, Recall: 1.00, Accuracy: 0.88
+            <br>
+            - Threshold: 0.50 (Default) - Precision: 0.95, Recall: 1.00, Accuracy: 0.95
+            <br>
+            - Threshold: 0.95 - Precision: 0.98, Recall: 0.77, Accuracy: 0.79</p>
+        <br>
+        <p>Insights: Default threshold (0.50) provides a balanced trade-off. Adjust threshold based on specific use case requirements.
+            <br>
+
+            Recommendation: The default threshold (0.50) seems suitable for a balanced precision-recall trade-off.</p>
+            <br>
+            <img src="Screenshot 2024-02-03 172647.png" alt="Code Screenshot" class="code-image">
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+       
+       
+        <button onclick="closeProjectDetails('project10-details')">Close Project Details</button>
+        
+
+    </div>
+
+</div>
+
+<!-- Scripts -->
+<script>
+    function toggleDetails(detailsId) {
+        var details = document.getElementById(detailsId);
+        var display = details.style.display;
+        if (display === 'none') {
+            details.style.display = 'block';
+        } else {
+            details.style.display = 'none';
+        }
+    }
+</script>
+<script>
+    // Universal function to close project details
+    function closeProjectDetails(detailsId) {
+        var details = document.getElementById(detailsId);
+        if (details) {
+            details.style.display = 'none';
+        }
+    }
+</script>

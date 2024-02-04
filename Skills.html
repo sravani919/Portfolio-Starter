@@ -224,20 +224,29 @@
       <script src="js/main.js"></script>
       <script>
         function togglePackages() {
-          var packagesDiv = document.querySelector(".python-packages");
-          var isVisible = packagesDiv.style.display !== "none";
-          packagesDiv.style.display = isVisible ? "none" : "block";
+  var packagesDiv = document.querySelector('.python-packages');
+  var isVisible = packagesDiv.style.display !== 'none';
+  var toggleButtonText = document.querySelector('.toggle-button');
 
-          // Animate the skill bars when showing the packages
-          if (!isVisible) {
-            var bars = packagesDiv.querySelectorAll(".packages");
-            bars.forEach(function (bar) {
-              var percentage = bar.dataset.percentage;
-              var progressBar = bar.querySelector("div span");
-              progressBar.style.width = percentage + "%";
-            });
-          }
-        }
+  // Toggle the display of the .python-packages div
+  packagesDiv.style.display = isVisible ? 'none' : 'block';
+
+  // Change the button text depending on the visibility
+  toggleButtonText.textContent = isVisible ? 'View Packages' : 'Hide Packages';
+
+  // Animate the skill bars when showing the packages
+  if (!isVisible) {
+    var bars = packagesDiv.querySelectorAll('.skill div span');
+    bars.forEach(function (bar) {
+      var percentage = bar.style.width;
+      bar.style.width = '0%'; // Reset to 0% before animation
+      setTimeout(function () {
+        bar.style.width = percentage; // Animate to the original percentage
+      }, 10); // Timeout to allow the reset to apply due to browser repaint
+    });
+  }
+}
+
       </script>
     </div>
   </body>

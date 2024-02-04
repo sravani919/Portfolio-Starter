@@ -26,7 +26,7 @@
          <a href="about.html">About </a>
          <a href="education.html">Education</a>
          <a href="Skills.html">My Skills</a>
-         <a href="projects.html">Portfolio</a>
+         <a href="projects1.html">projects</a>
          <a href="certificates.html">Certificates </a>
       
        
@@ -46,37 +46,35 @@
       <br>
       <br>
       <div class="width-100">
-        <form>
-          <input type="text" placeholder="Full Name...">
-          <input type="text" placeholder="Full Email Id...">
-          <input type="text" placeholder="Full Mobile No...">
-          <textarea placeholder="Enter Address..." ></textarea>
-          <button type="submit">Submit </button>
+        <form action="process_form.php" method="post">
+            <input type="text" name="name" placeholder="Full Name..." required>
+            <input type="email" name="email" placeholder="Full Email Id..." required>
+            <input type="tel" name="mobile" placeholder="Full Mobile No..." required>
+            <textarea name="address" placeholder="Enter Address..." required></textarea>
+            <button type="submit">Submit</button>
         </form>
-      </div>
-      <div class="width-33">
-        <h3>
-          <i class="fa fa-map-marker"></i>
-        </h3>
-        <h4>Address</h4>
-        <p>155 Anderson Hwy, Tillman Place</p>
-      </div>
-      <div class="width-33">
-        <h3>
-          <i class="fa fa-phone"></i>
-        </h3>
-        <h4>Phone</h4>
-        <p>+1(8642079864)</p>
-      </div>
-      <div class="width-33">
-        <h3>
-          <i class="fa fa-envelope-o"></i>
-        </h3>
-        <h4>Email</h4>
-        <p>sravanichinni855@gmail.com</p>
-      </div>
     </div>
-  </div>
+    
+  
+    <div class="width-33">
+      <h3 onclick="toggleVisibility('address-details')">
+        <i class="fa fa-map-marker"></i>
+        <span id="address-details" style="display:none;">155 Anderson Hwy, Tillman Place</span>
+      </h3>
+    </div>
+    <div class="width-33">
+      <h3 onclick="toggleVisibility('phone-details')">
+        <i class="fa fa-phone"></i>
+        <span id="phone-details" style="display:none;">+1(8642079864)</span>
+      </h3>
+    </div>
+    <div class="width-33">
+      <h3 onclick="toggleVisibility('email-details')">
+        <i class="fa fa-envelope-o"></i>
+        <span id="email-details" style="display:none;">sravanichinni855@gmail.com</span>
+      </h3>
+    </div>
+    
   <!------FOOTER SECTION------>
 <div class="footer">
     <div class="container">
@@ -99,3 +97,15 @@
       <div class="footer-sect mt-20 width-50">CopyRight © 2024 Sravani.com Website Template. All Rights Reserved</div>
     </div>
   </div>
+
+ <script>
+  function toggleVisibility(elementId) {
+  var element = document.getElementById(elementId);
+  if (element.style.display === "none") {
+    element.style.display = "inline"; // Or "block" if you prefer
+  } else {
+    element.style.display = "none";
+  }
+}
+
+ </script> 

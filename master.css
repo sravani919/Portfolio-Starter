@@ -27,6 +27,7 @@ html, body
 	float: left;
 }
 /*****MENU SECTION*****/
+
 .main-panel {
 	width: 100%;
 	float: left;
@@ -55,7 +56,16 @@ nav a {
 	font-weight: 500;
 	margin-left: 20px;
 	color: white;
-}
+	padding: 10px 15px; /* Add some padding around the text */
+	transition: transform 0.3s ease, background-color 0.3s ease;
+	border-radius: 4px; /* Optional: rounds the corners of the background */
+  }
+  
+  nav a:hover, nav a:focus {
+	transform: scale(1.05); /* Increase the size of the link slightly */
+	background-color: #3d4751; /* Change the background color */
+  }
+  
 /*****Main BANNER*****/
 .width-50 {
 	float: left;
@@ -97,6 +107,34 @@ nav a {
 	width: 50%;
 	margin-left: 10%;
 }
+
+/* General link styles */
+a {
+	transition: background-color 0.3s ease, transform 0.3s ease;
+	color: #fff; /* Default link color */
+	text-decoration: none; /* Removes underline by default */
+	padding: 5px 10px; /* Adds some space around the text */
+	border-radius: 4px; /* Rounds the corners of the background */
+  }
+  
+  /* Hover and focus styles */
+  a:hover, a:focus {
+	background-color: #3d4751; /* Background color on hover/focus */
+	color: #000; /* Text color on hover/focus */
+	transform: scale(1.05); /* Slightly increases size */
+  }
+  
+  
+
+
+
+
+
+
+
+
+
+
 /*ABOUT US SECTION*/
 .main-section {
 	width: 100%;
@@ -158,13 +196,21 @@ table td {
 	margin-top: 5px;
 	background: #e7e7e7;
 	border-radius: 10px;
+	transition: transform 0.3s ease;
  
 }
+.skill div:hover {
+	transform: scale(1.02); /* Slightly increases the size */
+  }
 .skill div span {
 	background: #4791f0;
 	height: 5px;
 	float: left;
+	transition: background-color 0.3s ease;
 }
+.skill div span:hover {
+	background-color: #3a79d7; /* A slightly different shade of blue for visual feedback */
+  }
 
 .other__skills {
     margin-left: 30px;
@@ -197,8 +243,13 @@ table td {
 	--pgPercentage: var(--value);
 	background: radial-gradient(closest-side, black 80%, transparent 0 99.9%, black 0),
 		conic-gradient(#4791f0 calc(var(--pgPercentage) * 1%), #e7e7e7 0);
+		transition: box-shadow 0.3s ease, transform 0.3s ease;
 
 }
+.progressbar:hover {
+	transform: scale(1.05);
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Adds a shadow that gives a "lifting" effect */
+  }
 
   
 .toggle-button {
@@ -210,8 +261,13 @@ table td {
     border-radius: 5px;
     cursor: pointer;
     margin-top: 10px;
+	transition: background-color 0.3s, color 0.3s;
   }
-
+  .toggle-button:hover {
+	background-color: #3672d1; /* Darker shade for hover state */
+	color: #e7e7e7; 
+	transform: scale(1.05); /* Lighter text color for hover state */
+  }
 
   .chart-container {
     display: flex;
@@ -254,7 +310,12 @@ table td {
   justify-content: center;
   position: relative;
   margins: 0 5 px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+.bar:hover {
+	transform: translateY(-3px); /* Move up the bar slightly */
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for depth */
+  }
   
   .bar span {
     writing-mode: horizontal-tb;
@@ -265,8 +326,12 @@ table td {
     left: 50%;
     transform: translateX(-50%);
     color: #dce3ee; /* Set the color of the labels */
-    font-size: 14px; /* Adjust font-size as needed */
+    font-size: 14px; 
+	transition: color 0.3s ease;/* Adjust font-size as needed */
   
+  }
+  .bar:hover span {
+	color: #a2c4ff; /* Lighter shade of blue for the text */
   }
 
   .container1 {
@@ -310,7 +375,14 @@ table td {
 	padding: 30px 10px;
 	background: #262626;
 	margin-bottom: 20px;
+	transition: box-shadow 0.3s ease, border-color 0.3s ease; /* Smooth transition for shadow and border */
+  border: 1px solid transparent; /* Prepare the border for a color change */
+
 }
+.experience-list:hover {
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+	border-color: #4791f0; /* Changes the border color to the theme color */
+  }
 .experience-content {
 	width: 100%;
 	float: left;
@@ -340,8 +412,12 @@ table td {
 	border-radius: 15px;
 	width: 94%;
 	float: left;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
+.certificate-list:hover {
+	transform: scale(1.03); /* Slightly increase the size */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for depth */
+  }
 .certificate-list i {
 	font-size: 50px;
 	color: #4791f0;
@@ -355,12 +431,21 @@ table td {
 	margin-bottom: 15px;
 }
 
-.Certificate-list a {
+.certificate-list a {
 	font-size: 15px;
 	line-height: 25px;
-    Position:Centre;
-
-}  
+	position: center; /* Corrected from 'Position:Centre;' */
+	text-decoration: none; /* Optional: removes the underline */
+	color: #4791f0; /* Optional: changes the text color */
+	background-color: #333; /* Optional: adds a background color */
+	padding: 10px 20px; /* Optional: adds some padding */
+	border-radius: 4px; /* Optional: rounds the corners */
+	transition: background-color 0.3s, color 0.3s; /* Optional: animates the background and text color change */
+  }
+  .certificate-list a:hover {
+	background-color: #4791f0; /* Changes the background on hover */
+	color: #fff; /* Changes the text color on hover */
+  }
 
 /*****TESTIMONIAL SECTION*****/
 .testimonial {
@@ -381,8 +466,14 @@ table td {
 	line-height: 28px;
 	position: relative;
 	text-align: center;
+	transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+
    
 }
+.testimonial-content:hover {
+	background-color: #2e2e2e; /* Slightly lighter background color on hover */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+  }
 
 .testimonial i {
 	color: #4791f0;
@@ -390,6 +481,16 @@ table td {
 	margin-top: 60px;
     
 }
+
+.testimonial-name h5, .testimonial-name p {
+	transition: color 0.3s ease; /* Smooth transition for text color */
+  }
+  
+  .testimonial-content:hover h5, 
+  .testimonial-content:hover p {
+	color: #ffffff; /* Lighter text color on hover */
+  }
+  
 
 .testimonial-img {
 	width: 100%;
@@ -433,8 +534,15 @@ table td {
 	border-radius: 15px;
 	width: 94%;
 	float: left;
+	transition: all 0.3s ease;
 }
 
+.service-list:hover {
+	transform: scale(1.05); /* Slightly scale up */
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+	z-index: 10; /* Ensure the hovered card is above the others */
+  }
+ 
 .service-list i {
 	font-size: 50px;
 	color: #4791f0;
@@ -558,7 +666,57 @@ table td {
 .contact form {
 	width: 66%;
 	margin: 0px auto;
+}/* master.css */
+
+/* Responsive Image */
+.profile-image {
+	max-width: 100%;
+	height: auto;
+  }
+  
+  /* Responsive Navigation Menu */
+  nav a {
+	display: inline-block;
+	padding: 8px;
+	margin: 0 5px;
+  }
+  
+  @media only screen and (max-width: 768px) {
+	/* For mobile phones: */
+	
+	.main-panel .container .width-50,
+	.main-panel .container .width-33,
+	nav a {
+	  width: 100%;
+	  display: block;
+	  text-align: center;
+	}
+  
+	/* Hamburger menu styles here if you choose to implement */
+  }
+  
+  /* Ensure social icons are large enough to be tapped on a touchscreen */
+  .fa {
+	font-size: 24px; /* Adjust size as needed */
+	padding: 10px; /* Adds space around the icon */
+  }
+ /* Hover effect for input fields */
+.contact input[type="text"],
+.contact input[type="email"],
+.contact input[type="tel"],
+.contact textarea {
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+  border: 1px solid #a1a1a1; /* Border set here for transition effect */
 }
+
+.contact input[type="text"]:hover,
+.contact input[type="email"]:hover,
+.contact input[type="tel"]:hover,
+.contact textarea:hover {
+  box-shadow: 0 0 8px rgba(71, 145, 240, 0.8); /* Glowing effect on hover */
+  border-color: #4791f0; /* Border color changes to theme color */
+}
+ 
 .contact input,
 textarea {
 	width: 100%;
@@ -582,6 +740,11 @@ textarea {
 	border: none;
 	font-size: 16px;
 }
+.contact button:hover {
+	background-color: #3672d1; /* Darker shade for hover */
+	transform: translateY(-2px); /* Button moves up slightly */
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow effect for depth */
+  }
 .contact h3 {
 	font-size: 26px;
 	text-align: center;
@@ -622,4 +785,25 @@ textarea {
 	line-height: 50px;
 	font-size: 20px;
 	border-radius: 50%;
+}
+
+
+/* Add this to your master.css file or in a separate CSS file */
+
+  
+.width-33:hover h3,
+.width-33:hover h4,
+.width-33:hover p {
+  color: #fff; /* Text color changes to white on hover */
+}
+
+/* Social icons hover effect */
+.social-icon a i {
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.social-icon a:hover i {
+  color: #fff; /* Icon color changes to white on hover */
+  background-color: #4791f0; /* Background color changes to theme color */
+  border-color: #4791f0; /* Border color changes to match the background */
 }
