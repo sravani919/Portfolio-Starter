@@ -178,26 +178,34 @@
                 <div class="bars-container">
                   <div class="bar" style="height: 88%">
                     <span>Linear Regression</span>
+                    <span class="bar-percentage">88%</span>
                   </div>
                   <div class="bar" style="height: 92%">
                     <span>Logistic Regression</span>
+                    <span class="bar-percentage">92%</span>
                   </div>
                   <div class="bar" style="height: 85%">
                     <span>Naive Bayes</span>
+                    <span class="bar-percentage">85%</span>
                   </div>
                   <div class="bar" style="height: 88%">
                     <span>SVM Model</span>
+                    <span class="bar-percentage">88%</span>
                   </div>
                   <div class="bar" style="height: 92%">
                     <span>Decision Trees</span>
+                    <span class="bar-percentage">92%</span>
                   </div>
                   <div class="bar" style="height: 85%">
                     <span>Random Forest</span>
+                    <span class="bar-percentage">85%</span>
                   </div>
-                  <div class="bar" style="height: 88%">
+                  <div class="bar" style="height: 86%">
                     <span>AdaBoost</span>
+                    <span class="bar-percentage">86%</span>
                   </div>
                   <div class="bar" style="height: 85%">
+                    <span class="bar-percentage">85%</span>
                     <span>XGBoost</span>
                   </div>
                   <!-- Add other bars similarly -->
@@ -212,13 +220,27 @@
           <h2>Other skills</h2>
 
           <div class="progress-container">
-            <div class="progressbar" style="--value: 0.7">MYSQL</div>
-            <div class="progressbar" style="--value: 0.5">Tableau</div>
-            <div class="progressbar" style="--value: 0.8">Excel</div>
-            <div class="progressbar" style="--value: 0.6">ARCGIS</div>
-            <div class="progressbar" style="--value: 0.4">SalesForce</div>
-          </div>
-        </div>
+            <div class="progressbar" data-percentage="80">
+              <span class="label">MYSQL</span>
+              <span class="percentage-label">80%</span>
+            </div>
+            <div class="progressbar" data-percentage="90">
+              <span class="label">Tableau</span>
+              <span class="percentage-label">0%</span>
+            </div>
+            <div class="progressbar" data-percentage="91">
+              <span class="label">Excel</span>
+              <span class="percentage-label">0%</span>
+            </div>
+            <div class="progressbar" data-percentage="80">
+              <span class="label">Arcgis</span>
+              <span class="percentage-label">0%</span>
+            </div>
+            <div class="progressbar" data-percentage="50">
+              <span class="label">Salesforce</span>
+              <span class="percentage-label">0%</span>
+            </div>
+          
       </div>
 
       <script src="js/main.js"></script>
@@ -247,6 +269,11 @@
   }
 }
 
+document.querySelectorAll('.progressbar').forEach(function(bar) {
+  var percentage = bar.getAttribute('data-percentage');
+  bar.querySelector('.percentage-label').textContent = percentage + '%';
+});
+ 
       </script>
     </div>
   </body>

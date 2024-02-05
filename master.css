@@ -17,11 +17,15 @@ html, body
 	width: 1100px;
 	margin: 0px auto;
 	display: table;
+
 }
 .width-33 {
 	width: 33%;
 	float: left;
+
+/* Subtle initial shadow */
 }
+
 .width-66 {
 	width: 66%;
 	float: left;
@@ -63,7 +67,9 @@ nav a {
   
   nav a:hover, nav a:focus {
 	transform: scale(1.05); /* Increase the size of the link slightly */
-	background-color: #3d4751; /* Change the background color */
+	background-color: #3d4751;
+	box-shadow: 0 0 15px rgba(71, 145, 240, 0.75); /* Creates a glow effect */
+  color: #ffffff; /* Change the background color */
   }
   
 /*****Main BANNER*****/
@@ -121,8 +127,11 @@ a {
   a:hover, a:focus {
 	background-color: #3d4751; /* Background color on hover/focus */
 	color: #000; /* Text color on hover/focus */
-	transform: scale(1.05); /* Slightly increases size */
-  }
+	transform: scale(1.05);
+	box-shadow: 0 0 15px rgba(71, 145, 240, 0.75); /* Creates a glow effect */
+  color: #ffffff; /* Change the background color */
+  } /* Slightly increases size */
+ 
   
   
 
@@ -196,12 +205,14 @@ table td {
 	margin-top: 5px;
 	background: #e7e7e7;
 	border-radius: 10px;
-	transition: transform 0.3s ease;
+	transition: width 0.5s ease, background-color 0.3s ease;
+
  
 }
 .skill div:hover {
-	transform: scale(1.02); /* Slightly increases the size */
-  }
+	width: 110%; /* Extend the width beyond 100% for a stretch effect */
+  background-color: #3662c4; /* Change to a different shade of blue */
+}
 .skill div span {
 	background: #4791f0;
 	height: 5px;
@@ -231,14 +242,17 @@ table td {
 	color: #4791f0;
 	margin:0 10px;
 	width: 100px;
-	
+	margin-bottom: 40px;
 	height: 100px;
 	
 	border-radius: 50%;
 
-
+    overflow:hidden;
 	place-items: center;
+	position: relative;
 	display: grid;
+	transition: box-shadow 0.5s ease, transform 0.5s ease; /* Smooth transition for shadow and transform */
+
 
 	--pgPercentage: var(--value);
 	background: radial-gradient(closest-side, black 80%, transparent 0 99.9%, black 0),
@@ -246,12 +260,88 @@ table td {
 		transition: box-shadow 0.3s ease, transform 0.3s ease;
 
 }
+.progressbar::before {
+	content: '';
+	display: block;
+	height: 100%;
+	background-color: #4791f0;
+	border-radius: 10px;
+	width: 0%;
+	/* Use the data-percentage attribute for the animation */
+	animation: fillBar 2s forwards ease-in-out;
+  }
+  .percentage-label {
+	position: absolute;
+	bottom: -20px; /* Adjust the value to position the label below the progress bar */
+  left: 50%;
+	transform: translateY(-50%);
+	color: #fff;
+	/* Initially hidden */
+	opacity: 0; /* Start with the label hidden */
+	transition: opacity 0.3s ease-in-out;
+	font-size: 0.8em; 
+  }
+  
 .progressbar:hover {
-	transform: scale(1.05);
-	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Adds a shadow that gives a "lifting" effect */
+	transform: scale(1.1);
+	box-shadow: 0 0 20px #4791f0; /* Glowing effect */
+}
+
+.progress-label {
+	position: absolute;
+	width: 100%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: none; /* Hide by default */
+	color: #3c88f2; /* Use a color that is visible on your progress bar */
+	font-weight: bold;
+	/* ... other styles like background if needed ... */
+  }
+  .percentage-label {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: #fff; /* or any other color that stands out against your progress bar */
+     z-index: 10;
+	opacity: 0; /* Initially hidden */
+	transition: opacity 0.3s ease-in-out;
+	pointer-events: none; /* Smooth transition for opacity */
+  }
+  
+  .progressbar:hover .progress-label {
+	display: block; /* Show on hover */
+	opacity:1;
+  }
+  .progressbar:hover .percentage-label {
+	/* Make the label fully visible on hover */
+	opacity: 1;
+  }
+  
+  /* Keyframes for the loading animation */
+  @keyframes fillBar {
+	to {
+	  width: attr(data-percentage '%');
+	}
+  }
+  
+  /* Label for the skill name */
+  .label {
+	position: absolute;
+	top: 50%;
+	left: 25%;
+	transform: translateY(-50%);
+	color: #fff;
+  }
+  
+  /* When the progressbar is hovered, update the percentage label */
+  .progressbar:hover .percentage-label::after {
+	content: attr(data-percentage '%');
   }
 
-  
+
+
 .toggle-button {
     /* Styling for the toggle button */
     background-color: #4791f0; /* Example background color */
@@ -262,11 +352,13 @@ table td {
     cursor: pointer;
     margin-top: 10px;
 	transition: background-color 0.3s, color 0.3s;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   }
   .toggle-button:hover {
 	background-color: #3672d1; /* Darker shade for hover state */
 	color: #e7e7e7; 
-	transform: scale(1.05); /* Lighter text color for hover state */
+	transform: scale(1.05);
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);/* Lighter text color for hover state */
   }
 
   .chart-container {
@@ -310,11 +402,11 @@ table td {
   justify-content: center;
   position: relative;
   margins: 0 5 px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: all 0.5s ease;
 }
 .bar:hover {
-	transform: translateY(-3px); /* Move up the bar slightly */
-	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for depth */
+	transform: scale(1.1); /* Scale up the bar */
+  background-color: #3662c4;/* Add a subtle shadow for depth */
   }
   
   .bar span {
@@ -358,6 +450,22 @@ table td {
     flex-direction: row;
     
   }
+  .bar-percentage {
+	position: absolute;
+	top: 10px; /* Position it at the top inside the bar */
+	color: #fff; /* Set the color of the percentage text */
+	font-weight: bold; /* Make it bold */
+	display: none; /* Initially hide the percentage */
+  }
+  .bar:hover .bar-percentage {
+	display: block; /* Show the percentage on hover */
+  }
+  
+  .bar:hover {
+	transform: scale(1.05); /* Slightly increase the size of the bar on hover */
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Add a shadow for depth */
+  }
+
 
 
   /*****EXPERIENCE SECTION*****/
@@ -375,13 +483,14 @@ table td {
 	padding: 30px 10px;
 	background: #262626;
 	margin-bottom: 20px;
-	transition: box-shadow 0.3s ease, border-color 0.3s ease; /* Smooth transition for shadow and border */
-  border: 1px solid transparent; /* Prepare the border for a color change */
+	transition: box-shadow 0.3s ease-in-out, transform 0.3s ease, border-color 0.3s ease;
+    border: 1px solid transparent; /* Prepare the border for a color change */
 
 }
 .experience-list:hover {
-	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
-	border-color: #4791f0; /* Changes the border color to the theme color */
+	box-shadow: 0 0 15px rgba(71, 145, 240, 0.7); /* Stronger shadow for a glow effect */
+	border-color: #4791f0; /* Keeps the border color consistent with the glow */
+	transform: scale(1.02); /* Slightly enlarges the item to draw attention */
   }
 .experience-content {
 	width: 100%;
@@ -403,6 +512,8 @@ table td {
 .experience-content p {
 	font-size: 15px;
 }
+  /* CSS for glow effect on hover for the experience section */
+ 
   
 /*SERVICE SECTION*/
 .certificate-list {
@@ -413,11 +524,14 @@ table td {
 	width: 94%;
 	float: left;
 	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 .certificate-list:hover {
-	transform: scale(1.03); /* Slightly increase the size */
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for depth */
-  }
+	transform: translateY(-5px); /* Slightly raise up to give a "lifting" effect */
+  /* Glowing effect with larger, more diffused shadow */
+  box-shadow: 0 0 20px rgba(71, 145, 240, 0.75); /* Adjust the color and blur radius as needed */
+  z-index: 10; /* Ensure the hovered item is above the others */
+}
 .certificate-list i {
 	font-size: 50px;
 	color: #4791f0;
@@ -449,11 +563,21 @@ table td {
 
 /*****TESTIMONIAL SECTION*****/
 .testimonial {
-	width: 100%;
-	float: left;
-	margin-right: 1%;
-	margin-top: 50px;
-    
+	padding: 40px;
+  margin-top: 35px;
+  background: #262626;
+  border-radius: 15px;
+  width: 94%;
+  float: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for transform and box-shadow */
+  /* Initial subtle shadow for depth (optional) */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.testimonial:hover{
+	transform: translateY(-5px); /* Slightly raise up to give a "lifting" effect */
+  /* Glowing effect with larger, more diffused shadow */
+  box-shadow: 0 0 20px rgba(71, 145, 240, 0.75); /* Adjust the color and blur radius as needed */
+  z-index: 10; /* Ensure the hovered item is above the others */
 }
 
 .testimonial-content {
@@ -535,14 +659,20 @@ table td {
 	width: 94%;
 	float: left;
 	transition: all 0.3s ease;
-}
-
-.service-list:hover {
-	transform: scale(1.05); /* Slightly scale up */
-	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Shadow for depth */
-	z-index: 10; /* Ensure the hovered card is above the others */
+	transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for transform and box-shadow */
+	/* Initial subtle shadow for depth (optional) */
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   }
- 
+
+  .service-list:hover {
+	transform: translateY(-5px); /* Slightly raise up to give a "lifting" effect */
+	/* Glowing effect with larger, more diffused shadow */
+	box-shadow: 0 0 20px rgba(71, 145, 240, 0.75); /* Adjust the color and blur radius as needed */
+	z-index: 10; /* Ensure the hovered item is above the others */
+  }
+  .service-list {
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
 .service-list i {
 	font-size: 50px;
 	color: #4791f0;
@@ -586,6 +716,7 @@ table td {
     display: flex;
     justify-content: flex-end;
     margin-right: 300px;
+	flex-wrap: wrap;
 }
 
 .about__nav > a {
@@ -593,6 +724,7 @@ table td {
     color: white;
     padding: 15px;
     font-size: 15px;
+	transition: color 0.3s ease;
 }
 
 .main__about {
@@ -603,18 +735,108 @@ table td {
 }
 
 .main__about li {
-    font-size: large;
+    font-size:  large;;
     line-height: 30px;
     list-style: none;
 }
 
 .image__about {
-    object-fit:contain;
+    object-fit:cover;
     height: 420px;
     margin-top: 35px;
     border-radius: 5%;
+	transition: transform 0.3s ease;
 }
+.image__about::before {
+	content: '';
+	position: absolute;
+	top: -10px; right: -10px; bottom: -10px; left: -10px;
+	z-index: -1;
+	background: linear-gradient(45deg, #1b81d4, #4791f0, #1b81d4, #4791f0);
+	background-size: 300% 300%;
+	border-radius: calc(5% + 10px);
+	animation: moveGradient 3s infinite alternate;
+  }
+  
+  @keyframes moveGradient {
+	0% { background-position: 0% 50%; }
+	100% { background-position: 100% 50%; }
+  }
+  .image__about:hover {
+	transform: scale(1.1) rotate3d(1, 5, 0, 10deg);
+	transition: transform 0.5s ease-in-out;
+  }
+  @keyframes floating {
+	0% { transform: translateY(0px); }
+	50% { transform: translateY(-10px); }
+	100% { transform: translateY(0px); }
+  }
+  
+  .image__about {
+	animation: floating 6s ease-in-out infinite;
+  }
+  .image__about {
+	transition: transform 0.6s;
+	transform-style: preserve-3d;
+  }
+  
+  
+  @keyframes pulseGlow {
+	0%, 100% { box-shadow: 0 0 25px #1b81d4; }
+	50% { box-shadow: 0 0 50px #4791f0; }
+  }
+  
+  .image__about {
+	animation: pulseGlow 2s infinite alternate ease-in-out;
+  }
+  
+  /* You'll need to adjust your HTML structure and add styling for the backside of the image. */
+  
 
+
+
+
+
+
+
+
+  .content__about {
+	animation: 1s ease-out 0s 1 slideInFromLeft;
+  }
+  
+  .main__about li {
+	opacity: 0;
+	transform: translateY(-10px);
+	animation: fadeInUp 0.5s ease forwards;
+  }
+  
+  .main__about li:nth-child(1) { animation-delay: 0.5s; }
+  .main__about li:nth-child(2) { animation-delay: 0.6s; }
+  .main__about li:nth-child(3) { animation-delay: 0.7s; }
+  .main__about li:nth-child(4) { animation-delay: 0.8s; }
+  .main__about li:nth-child(5) { animation-delay: 0.9s; }
+  .main__about li:nth-child(6) { animation-delay: 1.0s; }
+  .main__about li:nth-child(7) { animation-delay: 1.1s; }
+  
+  @keyframes fadeInUp {
+	to {
+	  opacity: 1;
+	  transform: translateY(0);
+	}
+  }
+  .container__about {
+	opacity: 0;
+	transform: scale(0.95);
+	animation: scaleUp 0.5s ease forwards;
+  }
+  
+  @keyframes scaleUp {
+	100% {
+	  opacity: 1;
+	  transform: scale(1);
+	}
+  }
+  
 .chart__group {
     display: flex;
     flex-direction: row;
@@ -748,7 +970,7 @@ textarea {
 .contact h3 {
 	font-size: 26px;
 	text-align: center;
-	margin-top: 60px;
+	margin-top: -10px;
 	color: #4791f0;
 }
 .contact h4 {
@@ -764,13 +986,29 @@ textarea {
 /*****FOOTER SECTION*****/
 .footer {
 	background-color: #202020;
-	padding: 30px 0px 40px 0px;
+	background-size: auto;
+	padding: 10px 0px 30px 10px;
 	width: 100%;
 	float: left;
+	margin-top: 05%;
 }
 .footer-sect {
 	color: #b3b3b3;
 }
+.footer .container {
+  max-width: 960px; /* Adjust based on your preference */
+  margin: ; /* Center the container */
+  display: flex;
+  justify-content: space-between; /* Adjust this to 'space-around' or 'space-evenly' for different spacing */
+  align-items: center;
+  flex-wrap: wrap; /* Ensure it wraps on smaller screens */
+}
+.footer-sect.mt-20 {
+	width: 100%;
+	text-align: center;
+	margin-top: 20px;
+	height:10%; /* Add more space above the copyright text */
+  }
 .footer-sect a {
 	color: #b3b3b3;
 	margin-left: 10px;
@@ -799,6 +1037,7 @@ textarea {
 
 /* Social icons hover effect */
 .social-icon a i {
+	
   transition: color 0.3s ease, background-color 0.3s ease;
 }
 
@@ -807,3 +1046,323 @@ textarea {
   background-color: #4791f0; /* Background color changes to theme color */
   border-color: #4791f0; /* Border color changes to match the background */
 }
+
+/* Add this to your existing CSS file */
+
+section {
+	margin: 15rem 8.5rem;
+}
+
+.main1 {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+.main1 h3 {
+	font-size: 1.5rem;
+}
+.main1 h1 {
+	font-size: 3rem;
+	font-weight: 600;
+	margin-top: .5rem;
+	color: #4791f0;
+}
+.main1 p {
+	line-height: 1.7;
+	font-size: 1.15rem;
+	margin-top: .5rem;
+}
+.Information {
+	width: 50%;
+}
+
+.social {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+	margin-top: 1rem;
+}
+
+.social a {
+	color: var(--secondary-color);
+	font-size: 1rem;
+	border: 1px solid #1d87de;
+	border-radius: 50%;
+	padding: 0.3rem;
+	text-align: center;
+	width: 27px;
+	height: 25px;
+	display: grid;
+	place-items: center;
+
+}
+
+.social a:hover {
+	color: #fff;
+	background-color: var(--secondary-color);
+	box-shadow: 0 0 20px var(--secondary-color);
+	border-color: var(--secondary-color);
+	transition: all .3s ease-in-out;
+
+}
+
+
+
+.images {
+	width: 25em;
+	height: 15em;
+	border-radius: 50%;
+	margin: auto;
+	margin-top: -7%;
+}
+
+.blue-bg-outer {
+	width: 25em;
+	height: 25em;
+	border-radius: 50%;
+	background: #1b81d4;
+	display: grid;
+	place-items: center;
+}
+
+.white-bg {
+	width: 21.875em;
+	height: 21.875em;
+	border-radius: 50%;
+	background: #fff;
+	display: grid;
+	place-items: center;
+}
+
+.blue-bg {
+	width: 13.75em;
+	height: 19.75em;
+	border-radius: 50%;
+	background: var(--primary-color);
+	margin-left:-11%;
+}
+
+.blue-bg img {
+	position: relative;
+	width: 100%;
+	border-radius: 50%;
+}
+.blue-bg img:hover {
+	transform: scale(1.05);
+	transition: transform 0.3s ease-in-out;
+  }
+  .blue-bg img {
+	transition: box-shadow 0.3s ease-in-out;
+  }
+  
+  .blue-bg img:hover {
+	box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+  }
+  
+  .blue-bg img:hover {
+	transform: rotate(5deg);
+	transition: transform 0.3s ease-in-out;
+  }
+  @keyframes pulse {
+	0% { transform: scale(1); }
+	50% { transform: scale(1.05); }
+	100% { transform: scale(1); }
+  }
+  
+  .blue-bg img {
+	animation: pulse 2s infinite ease-in-out;
+  }
+  @keyframes float {
+	0%, 100% { transform: translateY(0); }
+	50% { transform: translateY(-10px); }
+  }
+  
+  .blue-bg img {
+	animation: float 6s infinite ease-in-out;
+  }
+  .blue-bg:hover {
+	animation: borderGlow 1s forwards;
+  }
+  
+  @keyframes borderGlow {
+	from { box-shadow: 0 0 0px #fff; }
+	to { box-shadow: 0 0 10px #fff; }
+  }
+  .blue-bg-outer:hover {
+	background-color: #165a8f;
+	transition: background-color 0.3s ease-in-out;
+  }
+   
+  .blue-bg-outer:hover {
+	transform: scale(1.03);
+	transition: transform 0.3s ease-in-out;
+  }
+  @keyframes pulsingGlow {
+	0% { box-shadow: 0 0 10px #1b81d4; }
+	50% { box-shadow: 0 0 20px #1b81d4; }
+	100% { box-shadow: 0 0 10px #1b81d4; }
+  }
+  
+  .blue-bg-outer {
+	animation: pulsingGlow 2s infinite ease-in-out;
+  }
+  .white-bg:hover {
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	transition: box-shadow 0.3s ease-in-out;
+  }
+  .white-bg:hover {
+	transform: rotate(-5deg);
+	transition: transform 0.3s ease-in-out;
+  }
+  @keyframes breathing {
+	0%, 100% { transform: scale(1); }
+	50% { transform: scale(1.05); }
+  }
+  
+  .white-bg {
+	animation: breathing 3s infinite ease-in-out;
+  }
+  @keyframes colorPulse {
+	0%, 100% { background-color: #fff; }
+	50% { background-color: #f0f0f0; }
+  }
+  
+  .white-bg {
+	animation: colorPulse 5s infinite ease-in-out;
+  }
+  
+/*BUTTON*/
+.cv-btn {
+	margin-top: 1.5rem;
+	padding: 1em 2.5em;
+	border-radius: 25px;
+	background-color: #33383C;
+	font-size: 1rem;
+	font-weight: bold;
+	color: white;
+	border: 2px solid var(--primary-color);
+	cursor: pointer;
+	transition: .3s ease-in;
+}
+.cv-btn:hover {
+	background-color: transparent;
+	color: var(--primary-color);
+}
+@media only screen and (max-width: 1024px) {
+	html {
+		font-size: 80%;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	html {
+		font-size: 100%;
+	}
+
+}
+
+@media only screen and (max-width: 480px) {
+
+	section {
+		margin: 0 1rem;
+	}
+	.images {
+		min-width: 15em;
+	}
+
+	.blue-bg-outer {
+		width: 20em;
+		height: 20em;
+		margin: auto;
+
+	}
+
+	.white-bg {
+		width: 16.875em;
+		height: 16.875em;
+	}
+
+	.blue-bg {
+		width: 12.75em;
+		height: 12.75em;
+	}
+
+}
+
+@media only screen and (max-width: 320px) {
+	.images {
+		height: 17em;
+	}
+	.blue-bg-outer {
+		width: 16em;
+		height: 16em;
+
+	}
+
+	.white-bg {
+		width: 13em;
+		height: 13em;
+	}
+
+	.blue-bg {
+		width: 11em;
+		height: 11em;
+	}
+
+	.blue-bg img {
+		position: relative;
+		bottom: 20px;
+		right: 10px;
+		width: 100%;
+	}
+}
+
+
+
+  /* Typing keyframes */
+  @keyframes typing {
+	from { width: 0 }
+	to { width: 60% }
+  }
+  
+  /* Blinking cursor keyframes */
+  .Information h3, .Information h1, .Information p {
+	position: relative;
+	white-space: nowrap;
+	overflow: hidden;
+	border-right: .15em solid #33383C; /* Cursor-like solid block */
+	/* The 'steps' function should match the exact number of characters */
+	animation: typing 3.5s steps(30, end) forwards, /* Adjust the '30' to match the number of characters */
+			  blink-caret .75s step-end infinite;
+	animation-fill-mode: forwards; /* Keeps the styles set by the final keyframe after the animation completes */
+  }
+  
+  /* Typing keyframes */
+  @keyframes typing {
+	from { width: 0 }
+	to { width: 100% }
+  }
+  
+  /* Blinking cursor keyframes */
+  @keyframes blink-caret {
+	from, to { border-color: transparent }
+	50% { border-color: #031f3c }
+  }
+  
+  .Information h1 {
+	animation-delay: 3.5s; /* Starts after the first line completes */
+  }
+  
+  .Information p {
+	animation-delay: 7s; /* Adjust based on the text length and when you want it to start */
+  }
+  
+  .Information h1 {
+	animation-delay: 3.5s; /* Starts after the first line completes */
+  }
+  
+  .Information p {
+	animation-delay: 7s; /* Adjust based on the text length and when you want it to start */
+  }
+  
