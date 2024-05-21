@@ -193,6 +193,10 @@ table td {
 	margin-top: 30px;
 	font-size: 17px;
 }
+.skill-section {
+    width: 45%;
+    margin: 10px;
+}
 
 .skill span {
 	float: right;
@@ -223,123 +227,6 @@ table td {
 	background-color: #3a79d7; /* A slightly different shade of blue for visual feedback */
   }
 
-.other__skills {
-    margin-left: 30px;
-    margin-top: 70px;
-}
-
-.progress-container {
-	display: flex;
-	flex-direction: row; /* This will lay out all children in a row */
-	justify-content: space-around; /* This will space out the progress bars evenly */
-	align-items: center; /* This will align the progress bars vertically */
-    margin-top: 30px;
-  }
-
-
-
-  .progressbar  {
-	color: #4791f0;
-	margin:0 10px;
-	width: 100px;
-	margin-bottom: 40px;
-	height: 100px;
-	
-	border-radius: 50%;
-
-    overflow:hidden;
-	place-items: center;
-	position: relative;
-	display: grid;
-	transition: box-shadow 0.5s ease, transform 0.5s ease; /* Smooth transition for shadow and transform */
-
-
-	--pgPercentage: var(--value);
-	background: radial-gradient(closest-side, black 80%, transparent 0 99.9%, black 0),
-		conic-gradient(#4791f0 calc(var(--pgPercentage) * 1%), #e7e7e7 0);
-		transition: box-shadow 0.3s ease, transform 0.3s ease;
-
-}
-.progressbar::before {
-	content: '';
-	display: block;
-	height: 100%;
-	background-color: #4791f0;
-	border-radius: 10px;
-	width: 0%;
-	/* Use the data-percentage attribute for the animation */
-	animation: fillBar 2s forwards ease-in-out;
-  }
-  .percentage-label {
-	position: absolute;
-	bottom: -20px; /* Adjust the value to position the label below the progress bar */
-  left: 50%;
-	transform: translateY(-50%);
-	color: #fff;
-	/* Initially hidden */
-	opacity: 0; /* Start with the label hidden */
-	transition: opacity 0.3s ease-in-out;
-	font-size: 0.8em; 
-  }
-  
-.progressbar:hover {
-	transform: scale(1.1);
-	box-shadow: 0 0 20px #4791f0; /* Glowing effect */
-}
-
-.progress-label {
-	position: absolute;
-	width: 100%;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	display: none; /* Hide by default */
-	color: #3c88f2; /* Use a color that is visible on your progress bar */
-	font-weight: bold;
-	/* ... other styles like background if needed ... */
-  }
-  .percentage-label {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	color: #fff; /* or any other color that stands out against your progress bar */
-     z-index: 10;
-	opacity: 0; /* Initially hidden */
-	transition: opacity 0.3s ease-in-out;
-	pointer-events: none; /* Smooth transition for opacity */
-  }
-  
-  .progressbar:hover .progress-label {
-	display: block; /* Show on hover */
-	opacity:1;
-  }
-  .progressbar:hover .percentage-label {
-	/* Make the label fully visible on hover */
-	opacity: 1;
-  }
-  
-  /* Keyframes for the loading animation */
-  @keyframes fillBar {
-	to {
-	  width: attr(data-percentage '%');
-	}
-  }
-  
-  /* Label for the skill name */
-  .label {
-	position: absolute;
-	top: 50%;
-	left: 25%;
-	transform: translateY(-50%);
-	color: #fff;
-  }
-  
-  /* When the progressbar is hovered, update the percentage label */
-  .progressbar:hover .percentage-label::after {
-	content: attr(data-percentage '%');
-  }
-
 
 
 .toggle-button {
@@ -365,18 +252,18 @@ table td {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    padding-top: 20px; /* Space above the chart */
-    border-top: 2px solid black; /* Y-axis line */
+    padding-top: 40px; /* Space above the chart */
+   
     position: relative;
     width: 80%; /* Adjust to the desired width */
     max-width: 800px; /* Adjust to the maximum width you want */
-    margin: right; /* This will center the container */
+    margin: 30px; /* This will center the container */
     margin-top: 50px;
   }
   
   
   .y-axis {
-    height: 440px;
+    height: 250px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -387,10 +274,10 @@ table td {
     display: flex;
     justify-content: space-around; /* This will distribute bars with space in between */
     align-items: flex-end;
-    width: 100%;
+    width: 85%;
     max-width: 600px; /* Adjust to the maximum width you want */
     border-bottom: 2px solid black; /* X-axis line */
-    height: 440px; /*Adjust to control the width of the bar container */
+    height: 250px; /*Adjust to control the width of the bar container */
     margin-left: 10px;
 }
   
@@ -401,7 +288,7 @@ table td {
     display: flex;
   justify-content: center;
   position: relative;
-  margins: 0 5 px;
+  margin: 0 5 px;
   transition: all 0.5s ease;
 }
 .bar:hover {
@@ -418,13 +305,17 @@ table td {
     left: 50%;
     transform: translateX(-50%);
     color: #dce3ee; /* Set the color of the labels */
-    font-size: 14px; 
+    font-size: 12px; 
 	transition: color 0.3s ease;/* Adjust font-size as needed */
   
   }
   .bar:hover span {
 	color: #a2c4ff; /* Lighter shade of blue for the text */
   }
+
+ 
+  
+  
 
   .container1 {
 	display: flex; /* Changed from table to flex */
@@ -434,8 +325,35 @@ table td {
 	width: 100%; /* Take up full width of the screen */
 	max-width: none; /* Remove any max-width if it exists */
   }
+  .container2 {
+	display: flex; /* Changed from table to flex */
+    flex-direction: column;
+	justify-content: space-around; /* This will space out the two sections evenly */
+	align-items: stretch; /* This will make sure both sections stretch to the same height */
+	width: 100%; /* Take up full width of the screen */
+	max-width: none; /* Remove any max-width if it exists */
+  }
+  
+  .container3 {
+	display: flex; /* Changed from table to flex */
+    flex-direction: column;
+	justify-content: space-around; /* This will space out the two sections evenly */
+	align-items: stretch; /* This will make sure both sections stretch to the same height */
+	width: 100%; /* Take up full width of the screen */
+	max-width: none; /* Remove any max-width if it exists */
+  }
+  
+  .container4 {
+	display: flex; /* Changed from table to flex */
+    flex-direction: column;
+	justify-content: space-around; /* This will space out the two sections evenly */
+	align-items: stretch; /* This will make sure both sections stretch to the same height */
+	width: 100%; /* Take up full width of the screen */
+	max-width: none; /* Remove any max-width if it exists */
+  }
+  
   .width-50, .chart-container {
-	width: 40%; /* Each section will take up half of the container's width */
+	width: 100%; /* Each section will take up half of the container's width */
 	/* Remove float: left; if it exists for these classes */
   }
   
@@ -450,6 +368,20 @@ table td {
     flex-direction: row;
     
   }
+  .skills__progress2 {
+    display: flex;
+    flex-direction: row;
+    
+  }
+  .width-33, .container3 {
+	margin: 30px;
+	padding: 0;
+  }
+  .width-33, .container4 {
+	margin: 5px;
+	padding: 0;
+  }
+ 
   .bar-percentage {
 	position: absolute;
 	top: 10px; /* Position it at the top inside the bar */

@@ -1,0 +1,237 @@
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.skill-section {
+    width: 45%;
+    margin: 10px;
+}
+
+.skill {
+    margin-top: 30px;
+    font-size: 17px;
+}
+
+.skill span {
+    float: right;
+}
+
+.skill div {
+    width: 100%;
+    float: left;
+    margin-top: 5px;
+    background: #e7e7e7;
+    border-radius: 10px;
+    transition: width 0.5s ease, background-color 0.3s ease;
+}
+
+.skill div:hover {
+    width: 110%;
+    background-color: #3662c4;
+}
+
+.skill div span {
+    background: #4791f0;
+    height: 5px;
+    float: left;
+    transition: background-color 0.3s ease;
+}
+
+.skill div span:hover {
+    background-color: #3a79d7;
+}
+
+.toggle-button {
+    background-color: #4791f0;
+    border: none;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s, color 0.3s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.toggle-button:hover {
+    background-color: #3672d1;
+    color: #e7e7e7;
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.other__skills {
+    margin-left: 30px;
+    margin-top: 70px;
+}
+
+.progress-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.progressbar {
+    color: #4791f0;
+    margin: 0 10px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    place-items: center;
+    position: relative;
+    display: grid;
+    transition: box-shadow 0.5s ease, transform 0.5s ease;
+    --pgPercentage: var(--value);
+    background: radial-gradient(closest-side, black 80%, transparent 0 99.9%, black 0), conic-gradient(#4791f0 calc(var(--pgPercentage) * 1%), #e7e7e7 0);
+}
+
+.progressbar::before {
+    content: '';
+    display: block;
+    height: 100%;
+    background-color: #4791f0;
+    border-radius: 10px;
+    width: 0%;
+    animation: fillBar 2s forwards ease-in-out;
+}
+
+.percentage-label {
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    font-size: 0.8em;
+}
+
+.progressbar:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #4791f0;
+}
+
+.progress-label {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    color: #3c88f2;
+    font-weight: bold;
+}
+
+.progressbar:hover .progress-label {
+    display: block;
+    opacity: 1;
+}
+
+.progressbar:hover .percentage-label {
+    opacity: 1;
+}
+
+@keyframes fillBar {
+    to {
+        width: attr(data-percentage '%');
+    }
+}
+
+.label {
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translateY(-50%);
+    color: #fff;
+}
+
+.progressbar:hover .percentage-label::after {
+    content: attr(data-percentage '%');
+}
+
+.chart-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 20px;
+    border-top: 2px solid black;
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    margin: right;
+    margin-top: 50px;
+}
+
+.y-axis {
+    height: 440px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0;
+}
+
+.bars-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    width: 100%;
+    max-width: 600px;
+    border-bottom: 2px solid black;
+    height: 440px;
+    margin-left: 10px;
+}
+
+.bar {
+    width: 0px;
+    background-color: #4791f0;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin: 0 5px;
+    transition: all 0.5s ease;
+}
+
+.bar:hover {
+    transform: scale(1.1);
+    background-color: #3662c4;
+}
+
+.bar span {
+    writing-mode: horizontal-tb;
+    text-orientation: upright;
+    transform: rotate(0deg);
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #dce3ee;
+    font-size: 12px;
+    transition: color 0.3s ease;
+}
+
+.bar:hover span {
+    color: #a2c4ff;
+}
+
+.bar-percentage {
+    position: absolute;
+    top: 10px;
+    color: #fff;
+    font-weight: bold;
+    display: none;
+}
+
+.bar:hover .bar-percentage {
+    display: block;
+}
+
+.bar:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
