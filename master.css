@@ -258,12 +258,12 @@ table td {
     width: 80%; /* Adjust to the desired width */
     max-width: 800px; /* Adjust to the maximum width you want */
     margin: 30px; /* This will center the container */
-    margin-top: 50px;
+    margin-top: 0px;
   }
   
   
   .y-axis {
-    height: 250px;
+    height: 400px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -277,8 +277,9 @@ table td {
     width: 85%;
     max-width: 600px; /* Adjust to the maximum width you want */
     border-bottom: 2px solid black; /* X-axis line */
-    height: 250px; /*Adjust to control the width of the bar container */
+    height: 400px; /*Adjust to control the width of the bar container */
     margin-left: 10px;
+	
 }
   
   
