@@ -1,237 +1,118 @@
-.skills-container {
+/* Common styles */
+.container {
+    width: 1100px;
+    margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: flex-start;
+    justify-content: space-between;
 }
 
-.skill-section {
+.width-50 {
     width: 45%;
-    margin: 10px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
 }
 
-.skill {
-    margin-top: 30px;
-    font-size: 17px;
-}
-
-.skill span {
-    float: right;
-}
-
-.skill div {
+.Talent-list {
+    padding: 20px;
+    margin-top: 35px;
+    background: #262626;
+    border-radius: 15px;
     width: 100%;
-    float: left;
-    margin-top: 5px;
-    background: #e7e7e7;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.Talent-list:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(71, 145, 240, 0.75);
+    z-index: 10;
+}
+
+.certificates-section {
+    display: none;
+    margin-top: 15px;
+}
+
+.certificate-list {
+    padding: 20px;
+    background: #333;
     border-radius: 10px;
-    transition: width 0.5s ease, background-color 0.3s ease;
+    text-align: center;
 }
 
-.skill div:hover {
-    width: 110%;
-    background-color: #3662c4;
-}
-
-.skill div span {
-    background: #4791f0;
-    height: 5px;
+.certificate-list i {
+    font-size: 50px;
+    color: #ca9f0f;
+    width: 70px;
     float: left;
-    transition: background-color 0.3s ease;
+    margin-right: 15px;
 }
 
-.skill div span:hover {
-    background-color: #3a79d7;
+.certificate-list h3 {
+    font-size: 20px;
+    margin-top: 10px;
 }
 
-.toggle-button {
-    background-color: #4791f0;
-    border: none;
-    color: #fff;
-    padding: 5px 10px;
-    border-radius: 5px;
-    cursor: pointer;
+.button-link {
+    font-size: 15px;
+    line-height: 25px;
+    text-decoration: none;
+    color: #4791f0;
+    background-color: #444;
+    padding: 10px 20px;
+    border-radius: 4px;
+    display: inline-block;
     margin-top: 10px;
     transition: background-color 0.3s, color 0.3s;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-.toggle-button:hover {
-    background-color: #3672d1;
-    color: #e7e7e7;
-    transform: scale(1.05);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-.other__skills {
-    margin-left: 30px;
-    margin-top: 70px;
-}
-
-.progress-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 30px;
-}
-
-.progressbar {
-    color: #4791f0;
-    margin: 0 10px;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    overflow: hidden;
-    place-items: center;
-    position: relative;
-    display: grid;
-    transition: box-shadow 0.5s ease, transform 0.5s ease;
-    --pgPercentage: var(--value);
-    background: radial-gradient(closest-side, black 80%, transparent 0 99.9%, black 0), conic-gradient(#4791f0 calc(var(--pgPercentage) * 1%), #e7e7e7 0);
-}
-
-.progressbar::before {
-    content: '';
-    display: block;
-    height: 100%;
+.button-link:hover {
     background-color: #4791f0;
-    border-radius: 10px;
-    width: 0%;
-    animation: fillBar 2s forwards ease-in-out;
-}
-
-.percentage-label {
-    position: absolute;
-    bottom: -20px;
-    left: 50%;
-    transform: translateY(-50%);
     color: #fff;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-    font-size: 0.8em;
 }
 
-.progressbar:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 20px #4791f0;
-}
-
-.progress-label {
-    position: absolute;
-    width: 100%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+/* Popup styling */
+.popup-container {
     display: none;
-    color: #3c88f2;
-    font-weight: bold;
-}
-
-.progressbar:hover .progress-label {
-    display: block;
-    opacity: 1;
-}
-
-.progressbar:hover .percentage-label {
-    opacity: 1;
-}
-
-@keyframes fillBar {
-    to {
-        width: attr(data-percentage '%');
-    }
-}
-
-.label {
-    position: absolute;
-    top: 50%;
-    left: 25%;
-    transform: translateY(-50%);
-    color: #fff;
-}
-
-.progressbar:hover .percentage-label::after {
-    content: attr(data-percentage '%');
-}
-
-.chart-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    padding-top: 20px;
-    border-top: 2px solid black;
-    position: relative;
-    width: 80%;
-    max-width: 800px;
-    margin: right;
-    margin-top: 50px;
-}
-
-.y-axis {
-    height: 440px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    padding: 0;
-}
-
-.bars-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-end;
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    max-width: 600px;
-    border-bottom: 2px solid black;
-    height: 440px;
-    margin-left: 10px;
-}
-
-.bar {
-    width: 0px;
-    background-color: #4791f0;
-    display: flex;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
     justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
     position: relative;
-    margin: 0 5px;
-    transition: all 0.5s ease;
+    width: 300px;
 }
 
-.bar:hover {
-    transform: scale(1.1);
-    background-color: #3662c4;
-}
-
-.bar span {
-    writing-mode: horizontal-tb;
-    text-orientation: upright;
-    transform: rotate(0deg);
-    position: absolute;
-    bottom: -30px;
-    left: 50%;
-    transform: translateX(-50%);
-    color: #dce3ee;
-    font-size: 12px;
-    transition: color 0.3s ease;
-}
-
-.bar:hover span {
-    color: #a2c4ff;
-}
-
-.bar-percentage {
+.popup-content .close {
     position: absolute;
     top: 10px;
-    color: #fff;
-    font-weight: bold;
-    display: none;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
 }
 
-.bar:hover .bar-percentage {
-    display: block;
+#popup-message {
+    margin: 20px 0;
 }
 
-.bar:hover {
-    transform: scale(1.05);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+@keyframes celebration {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+.celebrate {
+    animation: celebration 1s ease-in-out;
 }

@@ -76,6 +76,7 @@ nav a {
 .width-50 {
 	float: left;
 	width: 50%;
+	box-sizing: border-box;
 }
 .banner-section {
 	width: 100%;
@@ -340,19 +341,12 @@ table td {
     flex-direction: column;
 	justify-content: space-around; /* This will space out the two sections evenly */
 	align-items: stretch; /* This will make sure both sections stretch to the same height */
-	width: 100%; /* Take up full width of the screen */
+	width: 95%; /* Take up full width of the screen */
 	max-width: none; /* Remove any max-width if it exists */
+	margin: 30px;
   }
   
-  .container4 {
-	display: flex; /* Changed from table to flex */
-    flex-direction: column;
-	justify-content: space-around; /* This will space out the two sections evenly */
-	align-items: stretch; /* This will make sure both sections stretch to the same height */
-	width: 100%; /* Take up full width of the screen */
-	max-width: none; /* Remove any max-width if it exists */
-  }
-  
+ 
   .width-50, .chart-container {
 	width: 100%; /* Each section will take up half of the container's width */
 	/* Remove float: left; if it exists for these classes */
@@ -374,15 +368,8 @@ table td {
     flex-direction: row;
     
   }
-  .width-33, .container3 {
-	margin: 30px;
-	padding: 0;
-  }
-  .width-33, .container4 {
-	margin: 5px;
-	padding: 0;
-  }
- 
+  
+	
   .bar-percentage {
 	position: absolute;
 	top: 10px; /* Position it at the top inside the bar */
@@ -447,17 +434,36 @@ table td {
 }
   /* CSS for glow effect on hover for the experience section */
  
-  
+ 
 /*SERVICE SECTION*/
+.certificate-container {
+    display: inline-block;
+    width: 45%;
+    vertical-align: top;
+    margin: 10px 2.5%;
+    background: #262626;
+    border-radius: 15px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+	margin: 20px;
+}
+
+.certificate-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(71, 145, 240, 0.75);
+    z-index: 10;
+}
 .certificate-list {
-	padding: 40px;
-	margin-top: 35px;
+	padding: 20px;
+	margin-top: 20px;
 	background: #262626;
 	border-radius: 15px;
-	width: 94%;
+	width: 100%;
 	float: left;
 	transition: transform 0.3s ease, box-shadow 0.3s ease;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+	margin-right: 5%;
 }
 .certificate-list:hover {
 	transform: translateY(-5px); /* Slightly raise up to give a "lifting" effect */
@@ -467,21 +473,22 @@ table td {
 }
 .certificate-list i {
 	font-size: 50px;
-	color: #4791f0;
+	color: #dfbf0b;
 	width: 70px;
 	float: left;
+	
 }
 
 .certificate-list h3 {
-	font-size: 28px;
-	margin-top: 8px;
+	font-size: 15px;
+	margin-top: 10px;
 	margin-bottom: 15px;
 }
 
 .certificate-list a {
 	font-size: 15px;
 	line-height: 25px;
-	position: center; /* Corrected from 'Position:Centre;' */
+	 /* Corrected from 'Position:Centre;' */
 	text-decoration: none; /* Optional: removes the underline */
 	color: #4791f0; /* Optional: changes the text color */
 	background-color: #333; /* Optional: adds a background color */
@@ -493,6 +500,58 @@ table td {
 	background-color: #4791f0; /* Changes the background on hover */
 	color: #fff; /* Changes the text color on hover */
   }
+  .certificate-list:nth-child(2n) {
+    margin-right: 0; /* Remove margin-right for every second element */
+}
+.certificates-section {
+    display: none;
+    margin-top: 15px;
+}
+
+.button-link {
+    font-size: 15px;
+    line-height: 25px;
+    text-decoration: none;
+    color: #4791f0;
+    background-color: #444;
+    padding: 10px 20px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-top: 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.button-link:hover {
+    background-color: #4791f0;
+    color: #fff;
+}
+
+.certificate-logo {
+    width: 80px;
+    height: 120px;
+    display: block;
+    margin: 0 auto 20px auto;;
+}
+
+.close-button {
+	font-size: 14px;
+    line-height: 25px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #444;
+    padding: 10px 20px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-top: 10px;
+    transition: background-color 0.3s, color 0.3s;
+    cursor: pointer;
+}
+
+
+.close-button:hover {
+    background-color: #3662c4;
+	color: #fff;
+}
 
 /*****TESTIMONIAL SECTION*****/
 .testimonial {
