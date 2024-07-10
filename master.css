@@ -56,7 +56,7 @@ nav {
 
 nav a {
 	text-decoration: none;
-	font-size: 16px;
+	font-size: 14px;
 	font-weight: 500;
 	margin-left: 20px;
 	color: white;
@@ -161,7 +161,7 @@ a {
 .heading-text {
 	width: 100%;
 	float: left;
-	font-size: 35px;
+	font-size: 32px;
 	text-align: center;
 	color: #4791f0;
 }
@@ -556,7 +556,7 @@ table td {
 /*****TESTIMONIAL SECTION*****/
 .testimonial {
 	padding: 40px;
-  margin-top: 35px;
+  margin-top: 32px;
   background: #262626;
   border-radius: 15px;
   width: 94%;
@@ -594,7 +594,7 @@ table td {
 .testimonial i {
 	color: #4791f0;
 	font-size: 35px;
-	margin-top: 60px;
+	margin-top: 20px;
     
 }
 
@@ -1357,4 +1357,135 @@ section {
   .Information p {
 	animation-delay: 7s; /* Adjust based on the text length and when you want it to start */
   }
-  
+/* EXPERIENCE SECTION */
+.experience-card {
+    display: inline-block;
+    width: 45%;
+    vertical-align: top;
+    margin: 10px 2.5%;
+    background: #262626;
+    border-radius: 15px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin: 20px;
+}
+
+.experience-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(71, 145, 240, 0.75);
+    z-index: 10;
+}
+
+.experience-image {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 200px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.experience-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 60;
+    right: 0;
+    top:10;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.experience-details {
+    display: none;
+    margin-top: 15px;
+}
+
+.experience-toggle-button {
+    font-size: 15px;
+    line-height: 25px;
+    text-decoration: none;
+    color: #4791f0;
+    background-color: #444;
+    padding: 0px 20px;
+    border-radius: 4px;
+    display: inline-block;
+    transition: background-color 0.3s, color 0.3s;
+    cursor: pointer;
+}
+
+.experience-toggle-button:hover {
+    background-color: #4791f0;
+    color: #fff;
+}
+
+.experience-item {
+    padding: 20px;
+    margin-top: 20px;
+    background: #262626;
+    border-radius: 15px;
+    width: 100%;
+    float: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.experience-item:hover {
+    transform: translateY(-5px); /* Slightly raise up to give a "lifting" effect */
+    /* Glowing effect with larger, more diffused shadow */
+    box-shadow: 0 0 20px rgba(71, 145, 240, 0.75); /* Adjust the color and blur radius as needed */
+    z-index: 10; /* Ensure the hovered item is above the others */
+}
+
+.experience-item i {
+    font-size: 50px;
+    color: #dfbf0b;
+    width: 70px;
+    float: left;
+}
+
+.experience-item h3 {
+    font-size: 15px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.experience-item p {
+    font-size: 15px;
+    line-height: 25px;
+    color: #ddd; /* Optional: adjust the text color */
+}
+
+.experience-logo {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.experience-button-link {
+    font-size: 15px;
+    line-height: 25px;
+    text-decoration: none;
+    color: #4791f0;
+    background-color: #444;
+    padding: 10px 20px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-top: 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.experience-button-link:hover {
+    background-color: #4791f0;
+    color: #fff;
+}
+
+/* Adjust heading size and color */
+.experience-heading {
+    font-size: 20px; /* Increase the font size */
+    color: #4791f0; /* Change the color */
+    margin-bottom: 20px; /* Optional: add some space below the heading */
+}

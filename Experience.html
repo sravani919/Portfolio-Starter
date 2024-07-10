@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Student Portfolio Website Template</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="master.css">
+</head>
+<body>
+
+<!-----MENU SECTION------>
+<div class="main-panel">
+   <div class="container">
+     <div class="width-33 logo">Port <span class="span-col">folio</span></div>
+     <div class="width-66">
+       <nav>
+         <a href="certificates.html"><span class="span-col">Certificates</span></a>
+         <a href="testimonal.html">Testimonial</a>
+         <a href="Skills.html">My Skills</a>
+         <a href="Experience.html">Experience</a>
+         <a href="Projects1.html">Projects</a>
+         <a href="index.html">Home</a>
+         <a href="Contact.html">Contact</a>
+         <a href="about.html">About</a>
+         <a href="education.html">Education</a>
+       </nav>
+     </div>
+   </div>
+
+   <!------Experience SECTION------>
+   <div class="main-section">
+    <div class="container">
+        <h2 class="heading-text">My Experience</h2>
+
+        <!-- Experience at Clemson Engineers for Developing Communities -->
+        <div class="experience-card">
+           <h3 class="experience-heading">Clemson Engineers for Developing Communities</h3>
+          <div class="experience-image" style="background-image: url('cedcreal.png');">
+              <div class="experience-overlay">
+                  <button class="experience-toggle-button" onclick="toggleExperience('clemson-experience')" data-target="clemson-experience">View Details</button>
+              </div>
+          </div>
+     
+          <div id="clemson-experience" class="experience-details">
+              <div class="experience-item">
+                <i class="fas fa-briefcase"></i>
+                <h3>Data Analyst Intern</h3>
+                <p>Worked as a Data Analyst Intern from August 2023 to May 2024, Clemson.</p>
+              </div>
+              <div class="experience-item">
+                <i class="fas fa-briefcase"></i>
+                <h3>Data Science Intern</h3>
+                <p>Worked as a Data Science Intern from August 2023 to May 2024, Clemson.</p>
+              </div>
+          </div>
+        </div>
+
+        <!-- Experience at Aptech -->
+        <div class="experience-card">
+           <h3 class="experience-heading">Aptech</h3>
+          <div class="experience-image" style="background-image: url('aptech.jpg');">
+              <div class="experience-overlay">
+                  <button class="experience-toggle-button" onclick="toggleExperience('aptech-experience')" data-target="aptech-experience">View Details</button>
+              </div>
+          </div>
+     
+          <div id="aptech-experience" class="experience-details">
+              <div class="experience-item">
+                <i class="fas fa-briefcase"></i>
+                <h3>Machine Learning Intern</h3>
+                <p>Worked as a Machine Learning Intern from July 2022 to October 2022.</p>
+              </div>
+          </div>
+        </div>
+
+        <!-- Add more experiences similarly -->
+
+    </div>
+   </div>
+</div>
+
+<script>
+  function toggleExperience(sectionId) {
+      var section = document.getElementById(sectionId);
+      var isVisible = section.style.display !== 'none';
+      var toggleButton = document.querySelector('.experience-toggle-button[data-target="' + sectionId + '"]');
+  
+      // Toggle the display of the .experience-details div
+      section.style.display = isVisible ? 'none' : 'block';
+  
+      // Change the button text depending on the visibility
+      toggleButton.textContent = isVisible ? 'View Details' : 'Hide Details';
+  }
+</script>
+</body>
+</html>
