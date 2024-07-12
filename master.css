@@ -1358,6 +1358,7 @@ section {
 	animation-delay: 7s; /* Adjust based on the text length and when you want it to start */
   }
 /* EXPERIENCE SECTION */
+/* EXPERIENCE SECTION */
 .experience-card {
     display: inline-block;
     width: 45%;
@@ -1392,7 +1393,7 @@ section {
     bottom: 0;
     left: 60;
     right: 0;
-    top:10;
+    top: 10;
     color: #fff;
     padding: 20px;
     text-align: center;
@@ -1403,7 +1404,8 @@ section {
     margin-top: 15px;
 }
 
-.experience-toggle-button {
+.experience-toggle-button,
+.more-details-toggle-button {
     font-size: 15px;
     line-height: 25px;
     text-decoration: none;
@@ -1416,7 +1418,8 @@ section {
     cursor: pointer;
 }
 
-.experience-toggle-button:hover {
+.experience-toggle-button:hover,
+.more-details-toggle-button:hover {
     background-color: #4791f0;
     color: #fff;
 }
@@ -1488,4 +1491,13 @@ section {
     font-size: 20px; /* Increase the font size */
     color: #4791f0; /* Change the color */
     margin-bottom: 20px; /* Optional: add some space below the heading */
+}
+
+.dates {
+    text-align: right;
+}
+
+.more-details {
+    display: none;
+    margin-top: 10px;
 }

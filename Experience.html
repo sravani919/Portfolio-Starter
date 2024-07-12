@@ -29,30 +29,216 @@
      </div>
    </div>
 
-   <!------Experience SECTION------>
-   <div class="main-section">
-    <div class="container">
-        <h2 class="heading-text">My Experience</h2>
+     <!------Experience SECTION------>
+     <div class="main-section">
+      <div class="container">
+          <h2 class="heading-text">My Experience</h2>
+  
+          <!-- Experience at Clemson Engineers for Developing Communities -->
+          <div class="experience-card">
+             <h3 class="experience-heading">Clemson Engineers for Developing Communities</h3>
+             <h4 class="dates">August 2023 - May 2024</h4>
+             <br>
+            <div class="experience-image" style="background-image: url('cedcreal.png');">
+                <div class="experience-overlay">
+                    <button class="experience-toggle-button" onclick="toggleExperience('clemson-experience')" data-target="clemson-experience">View Details</button>
+                </div>
+            </div>
+       
+            <div id="clemson-experience" class="experience-details">
+                <div class="experience-item">
+                  <i class="fas fa-briefcase"></i>
+                  <h3>Data Analyst Intern</h3>
+                <p>As a Data Analyst Intern, I led a project combining Python and Power BI to analyze qualitative data from interviews on disaster preparedness and recovery. I conducted text preprocessing, term frequency analysis, and topic modeling in Python, while leveraging Power BI for spatial visualization and interactive analysis. This dual-platform approach provided comprehensive insights into community resilience and disaster management, enhancing policy-making and community engagement efforts.</p>
+                  
+                 <br>
+                  <button class="more-details-toggle-button" onclick="toggleMoreDetails('analysis-details')" data-target="analysis-details">View More Details</button>
+                  <div id="analysis-details" class="more-details">
+                    <h2> Disaster Management and Community Resilience Analysis</h2>
+                    <br>
+                    <h3>Overview:</h3>
+                    <p >In disaster management and community resilience, understanding the narratives and experiences of individuals and stakeholders is paramount. Through semi-structured interviews, valuable insights emerge, shedding light on perceptions, challenges, and strategies related to disaster preparedness and recovery efforts. This project aims to analyze these narratives, identify frequently occurring terms, uncover underlying themes, and explore potential variations based on geographic locations.</p>
+        <br>
+                     <h3>Analytical Approach: </h3>
+                    <p>This analysis employs a comprehensive methodology combining Python and Power BI to extract meaningful insights from qualitative data.</p>
+        <br>
+                    <h3>Python Analysis:</h3>
+                 <p> Understand disaster experiences and resilience discussions through data preprocessing, exploratory data analysis, text analysis, and geographic analysis.</p>
+        <br>
+                    <h3>Key Steps and Findings:<h3>
+                    
+                    <h4>Loading and Importing Packages</h4>
+                    <p> Utilized Pandas for data manipulation, ensuring efficient data handling and preparation.</p>
+                    <h4>Data Exploration:</h4> 
+                    <p> statistical analysis to understand data distributions and trends. Visualized data to identify patterns and outliers.</p>
+                      <h4>Handling Missing Values:</h4>
+                      <p> Identified and addressed missing values to ensure the reliability of the dataset. Applied imputation techniques to fill gaps in the data.</p>
+                        <h4>Text Preprocessing:</h4> 
+                        <p>Used NLTK and spaCy for tokenization, lemmatization, and removal of stopwords. Standardized text data to enhance consistency and analysis quality.</p>
+                          <h4>Error Resolving:</h4> 
+                          <p>Detected and corrected inconsistencies, such as typos and misclassifications. Implemented data validation steps to maintain data integrity.</p>
+                            <h4>Exploratory Data Analysis:</h4> 
+                            <p>Analyzed the distribution of responses across different sectors. Used visualization tools to uncover insights into sector-specific trends.</p>
+                              <h4>Term Frequency Analysis:</h4> 
+                              <p>Analyzed the most common words used in the text data to identify key themes. Created word frequency dictionaries to quantify term importance.</p>
+                                <h4>Creating Dictionary:</h4> 
+                                <p>Organized word frequencies into a comprehensive dictionary for further analysis. Enabled efficient retrieval and analysis of key terms.</p>
+                                  <h4>Topic Modeling:</h4> 
+                                  <p>Used Latent Dirichlet Allocation (LDA) to uncover latent topics within the text data. Identified themes such as community engagement, support, infrastructure, and natural disasters.</p>
+                                    <h4>Geographic Analysis:</h4>
+                                    <p> Geocoded location names and mapped coordinates to provide spatial insights. Analyzed geographic patterns to understand regional variations in responses.</p>
+                                      <h4>Integration with Power BI:</h4> 
+                                      <p>Shifted to Power BI for advanced spatial visualization and analysis. Combined Python and Power BI to leverage the strengths of both tools.</p>
+                    <br>
+                    <h3>Key Findings:</h3>
+                    <h4>Text Preprocessing:</h4> 
+                    <p>Cleaned and standardized text data, removing stopwords to focus on meaningful content.</p>
+                      <h4>Term Frequency Analysis:</h4>  
+                      <p>Identified common words such as "community," "emergency," and "county," indicating key themes.</p>
+                        <h4>Topic Modeling:</h4>
+                         <p> Revealed vital themes, including community engagement, assistance, infrastructure concerns, and natural disasters.</p>
+                          <h4>Geographic Analysis:</h4> 
+                          <p> Provided spatial insights into the data, highlighting regional variations in disaster experiences and resilience discussions.</p>
+        <br>
+                          <h3>Power BI Analysis:</h3>
+                    <p> Explore regional variations in disaster experiences and resilience discussions.</p>
+                       <br>
+                    <h3>Key Steps and Findings:</h3>
+                    <h4>Loading Data:</h4> 
+                    <p>Imported data from an Excel file into Power BI. Ensured the inclusion of geographic locations, speakers, sectors, roles, and comments.</p>
+                      <h4>Data Transformation and Cleaning:</h4> 
+                      <p> Performed data cleaning tasks such as removing duplicates and correcting errors. Standardized data formats to ensure consistency and accuracy.</p>
+                        <h4>Creating Full Location:</h4> 
+                        <p> Combined granular location data with state information to create a unique "Full Location" field. Enhanced the accuracy of geographic analysis by identifying each locale precisely.</p>
+                          <h4>Data Modeling:</h4> 
+                          <p>Verified that the data model was correctly set up. Ensured accurate column derivation for effective analysis.</p>
+                            <h4>Creating Visualizations:</h4> 
+                            <p> Generated interactive visualizations, including maps, slicers, and card visuals. Enabled dynamic data filtering and exploration.</p>
+                              <h4>Finalizing and Sharing:</h4> 
+                              <p>Published the dashboard within Power BI workspace. Provided detailed documentation of the process for reference and replication.</p>
+                   <br>
+                   <h3>Key Findings:</h3>
+                   <h4>Map Visualization:</h4> 
+                      <p>Integrated sector information and provided a geographical overview of data distribution.</p>
+                      <h4>Slicers and Card Visuals:</h4> 
+                      <p>Enabled users to filter data dynamically and gain summarized insights.</p>
+                      <h4>Interactive Analysis:</h4> 
+                      <p>Facilitated dynamic exploration and comparison of data points across visualizations.</p>
+                    <br>
+                    <h3>Key Findings in Python and Power BI:</h3>
+                      <h4>Python:</h4> 
+                      <p>Provided in-depth text analysis, revealing key themes and patterns within the data. It offered advanced NLP capabilities for comprehensive text preprocessing and topic modeling.</p>
+                      <h4>Power BI:</h4> 
+                      <p> Offered user-friendly geographic visualization and enhanced interactive analysis capabilities. It allowed for effective visualization of spatial data and integration with Python for a holistic analysis approach.</p>
+        
+                      <h3>Limitations and Strengths:</h3> 
+                        <h4>Python:</h4> 
+                        <br>
+                          <h4>Strengths:</h4> 
+                        <p>Advanced text analysis capabilities, comprehensive NLP tools, and flexibility in data manipulation.</p>
+                        <h4>Limitations:</h4> 
+                      <p> Requires significant coding expertise and computational resources.</p>
+                      <br>
+                      <h4>Power BI:</h4> 
+                      <br>
+                        <h4>Strengths:</h4> 
+                        <p>User-friendly interface, robust geographic visualization, and interactive analysis features.</p>
+                        <h4>Limitations:</h4> 
+                      <p>Limited advanced text analysis capabilities compared to Python.</p>
+        
+                      <h3>Role and Contributions:</h3> 
+                      <p>As a Data Analyst Intern and team leader for this project :</p>
+                    <p>1.Conducted a detailed KT Analysis to compare tools and select the most suitable ones for our analysis.</p>
+                    <p>2.Introduced Python and Power BI to enhance the analytical approach, leveraging their strengths for comprehensive insights.</p>
+                    <p>3.Created comprehensive documentation, including step-by-step guides and video tutorials, to ensure my teammates could effectively replicate the analysis.</p>
+                    <p>4.Provided training and support to teammates, ensuring they could use Python, Power BI, and Tableau efficiently.</p>
+                    <p>5.Emphasized data cleaning and collection strategies to improve analysis accuracy and reliability.</p>
+        
+                    <h3>Conclusion:</h3>
+                    <p> This project successfully combined Python and Power BI to analyze qualitative data on disaster experiences and community resilience. By leveraging the strengths of both tools, we gained comprehensive insights and provided actionable findings to stakeholders. This contributed to informed policy-making, improved practices, and enhanced community engagement efforts, ultimately supporting disaster management and community resilience initiatives.</p>
+                </div>
+            </div>
+      
+        
+ 
 
-        <!-- Experience at Clemson Engineers for Developing Communities -->
+           
+
+                <div class="experience-item">
+                  <i class="fas fa-briefcase"></i>
+                  <h3>Data Science Intern</h3>
+                  <p>During my tenure as a Data Science Intern at Clemson Engineers for Developing Communities, I worked on the DSR3P Fund Navigator project. This project involved developing and implementing advanced machine learning models to automate the categorization of federal grants, significantly improving the grant application process for low-capacity communities and successfully classifying over 70 grants for future automation.</p>
+                  <br>
+                  <button class="more-details-toggle-button" onclick="toggleMoreDetails('data-science-details')" data-target="data-science-details">View More Details</button>
+                  <div id="data-science-details" class="more-details">
+                      <h3>Overview of DSR3P Fund Navigator Project</h3>
+                      <p>Federal grants aim to provide financial assistance for public services and to support the economy. However, the grant application process can be difficult due to eligibility requirements, fund-matching requirements, and specific technical needs for the application1. Though many of these grants are targeted towards the most vulnerable communities, higher-capacity communities often out-compete low-capacity communities for the grants due to more competitive applications. These higher-capacity communities often have dedicated staff for grant applying and technical support. The grant application process can take a significant amount of time and effort, leading low-capacity communities who are already over-taxed to not apply or to not meet all requirements. This, in turn, widens the resource gap between communities. The DSR3P team aims to reduce this resource gap by developing a tool that helps match community needs with grants that they may be eligible for. </p>
+                       <br>
+                      <h3>Key Contributions and Achievements:</h3>
+                     <br>
+                     
+                        <h4> Data Preprocessing and Cleaning:</h4>
+                             
+                                  <p>1. Launched a robust data preprocessing pipeline using Microsoft Azure cloud services.</p>
+                                  <p>2. Reduced data inconsistencies by 95% through detailed documentation and automated validation scripts.</p>
+                              
+                       
+                                  <h4>Natural Language Processing (NLP) Techniques:<h4>
+                          
+                                    <p>1. Utilized NLP techniques for text analysis, including tokenization, removal of stop words, and transformation of text data into numerical representations.</p>
+                                      <p>2. Generated word clouds and performed topic modeling using Latent Dirichlet Allocation (LDA) to uncover underlying themes in grant descriptions.</p>
+                            
+                                      <h4>Machine Learning Model Development:</h4>
+                              <p>1. Trained and evaluated various machine learning models, including Logistic Regression, Random Forest, Support Vector Machines (SVM), Naive Bayes, and Gradient Boosting Machines (XGBoost).</p>
+                                  <p>2. Achieved high accuracy, precision, recall, and F1-scores, with Logistic Regression and Multinomial Naive Bayes performing particularly well.</p>
+                           
+                         <h4>Feature Engineering and Model Refinement:</h4>
+                             <p>1. Enhanced feature engineering by incorporating bi-grams and tri-grams.</p>
+                                 <p>2. Addressed class imbalance using Synthetic Minority Over-sampling Technique (SMOTE).</p>
+                                 <p>3. Conducted thorough error analysis and iterative refinement to improve model performance.</p>
+                            
+                                 <h4>Interactive Dashboards and Data Insights:</h4>
+                                 <p>1. Developed interactive dashboards using Tableau to facilitate strategic data insights.</p>
+                                  <p>2. Provided weekly insights that improved decision-making by 30% and utilized SQL databases for efficient data management and client transparency.</p>
+                             <br>
+                                  <h3>Grant Classification: <h3>
+                                    <p>Successfully classified over 70+ grants for future automation, paving the way for streamlined grant identification processes.</p>
+                           <br>
+                           <h3>Future Work and Deployment:<h3>
+                              
+                                <p>Focused on developing an intuitive user interface and integrating the model into operational systems.</p>
+                                  <p>Ensured thorough testing and validation in real-world scenarios, along with user training and support.</p>
+                                    <p> Established a feedback mechanism to gather user insights for iterative improvements.</p>
+                        
+                      <br>
+                      <h3>Conclusion:<h3>
+                      <p>The DSR3P Fund Navigator project showcased my ability to apply advanced data science and machine learning techniques to real-world problems. By automating the grant categorization process, I contributed to making grant identification more accessible and efficient, particularly for low-capacity communities. This project demonstrated my skills in data preprocessing, NLP, machine learning model development, and the creation of interactive data visualization tools, ultimately supporting equitable resource distribution and community development.</p>
+                  </div>
+                </div>
+            </div>
+          </div>
+     
+   
+        <!-- Experience at Nice Hi-Tech Centre -->
         <div class="experience-card">
-           <h3 class="experience-heading">Clemson Engineers for Developing Communities</h3>
-          <div class="experience-image" style="background-image: url('cedcreal.png');">
+          <h3 class="experience-heading">Nice Hi-Tech Centre</h3>
+          <h4 class="dates">August 2021 - July 2022</h4>
+           <br>
+          <div class="experience-image" style="background-image: url('.jpg');">
               <div class="experience-overlay">
-                  <button class="experience-toggle-button" onclick="toggleExperience('clemson-experience')" data-target="clemson-experience">View Details</button>
+                  <button class="experience-toggle-button" onclick="toggleExperience('nice-hitech-centre-experience')" data-target="nice-hitech-centre-experience">View Details</button>
               </div>
           </div>
      
-          <div id="clemson-experience" class="experience-details">
-              <div class="experience-item">
-                <i class="fas fa-briefcase"></i>
-                <h3>Data Analyst Intern</h3>
-                <p>Worked as a Data Analyst Intern from August 2023 to May 2024, Clemson.</p>
-              </div>
+          <div id="nice-hitech-centre-experience" class="experience-details">
               <div class="experience-item">
                 <i class="fas fa-briefcase"></i>
                 <h3>Data Science Intern</h3>
-                <p>Worked as a Data Science Intern from August 2023 to May 2024, Clemson.</p>
+                <p>Worked as a Data Science Intern from August 2021 to July 2022.</p>
+                <button class="more-details-toggle-button" onclick="toggleMoreDetails('nice-hitech-centre-details')" data-target="nice-hitech-centre-details">View More Details</button>
+                <div id="nice-hitech-centre-details" class="more-details">
+                    <p>Detailed overview of the Data Science Intern role...</p>
+                </div>
               </div>
           </div>
         </div>
@@ -60,6 +246,8 @@
         <!-- Experience at Aptech -->
         <div class="experience-card">
            <h3 class="experience-heading">Aptech</h3>
+           <h4 class="dates">July 2019 - October 2019</h4>
+           <br>
           <div class="experience-image" style="background-image: url('aptech.jpg');">
               <div class="experience-overlay">
                   <button class="experience-toggle-button" onclick="toggleExperience('aptech-experience')" data-target="aptech-experience">View Details</button>
@@ -70,12 +258,14 @@
               <div class="experience-item">
                 <i class="fas fa-briefcase"></i>
                 <h3>Machine Learning Intern</h3>
-                <p>Worked as a Machine Learning Intern from July 2022 to October 2022.</p>
+                <p>Worked as a Machine Learning Intern from July 2019 to October 2019.</p>
+                <button class="more-details-toggle-button" onclick="toggleMoreDetails('aptech-details')" data-target="aptech-details">View More Details</button>
+                <div id="aptech-details" class="more-details">
+                    <p>Detailed overview of the Machine Learning Intern role...</p>
+                </div>
               </div>
           </div>
         </div>
-
-        <!-- Add more experiences similarly -->
 
     </div>
    </div>
@@ -92,6 +282,18 @@
   
       // Change the button text depending on the visibility
       toggleButton.textContent = isVisible ? 'View Details' : 'Hide Details';
+  }
+
+  function toggleMoreDetails(sectionId) {
+      var section = document.getElementById(sectionId);
+      var isVisible = section.style.display !== 'none';
+      var toggleButton = document.querySelector('.more-details-toggle-button[data-target="' + sectionId + '"]');
+  
+      // Toggle the display of the .more-details div
+      section.style.display = isVisible ? 'none' : 'block';
+  
+      // Change the button text depending on the visibility
+      toggleButton.textContent = isVisible ? 'View More Details' : 'Hide More Details';
   }
 </script>
 </body>
