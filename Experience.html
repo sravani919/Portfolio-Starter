@@ -234,15 +234,67 @@
               <div class="experience-item">
                 <i class="fas fa-briefcase"></i>
                 <h3>Data Science Intern</h3>
-                <p>Worked as a Data Science Intern from August 2021 to July 2022.</p>
+                <p>During my internship at Nice Hi-Tech Centre, a small startup, I developed a predictive model for detecting potential fraudsters in the Enron scandal using advanced data analysis and machine learning techniques. The project aimed to enhance our fraud detection mechanisms to ensure organizational security, with the AdaBoostClassifier achieving the highest performance. This initiative was crucial for developing the organization and establishing robust security practices.</p>
                 <button class="more-details-toggle-button" onclick="toggleMoreDetails('nice-hitech-centre-details')" data-target="nice-hitech-centre-details">View More Details</button>
                 <div id="nice-hitech-centre-details" class="more-details">
-                    <p>Detailed overview of the Data Science Intern role...</p>
-                </div>
+                  <h2>Enron Fraud Detection Project</h2>
+                  <br>
+                  <h3>Overview:</h3>
+                  <p>The Enron Fraud Detection project aimed to identify Enron employees who might have committed fraud based on public financial and email datasets. The project's objective was to build a predictive model to detect potential fraudsters using advanced data analysis and machine learning techniques. Additionally, this project was instrumental in developing our organization's fraud detection mechanisms to prevent similar occurrences.</p>
+                  <br>
+                  <h3>Machine Learning Pipeline:</h3>
+                  <p>The project involved a comprehensive machine learning pipeline to process the data, engineer features, and train predictive models.</p>
+                  <br>
+                  <h3>Key Steps and Findings:</h3>
+                  <h4>Defining Problem Statement:</h4>
+                  <p>The goal was to identify individuals involved in the Enron fraud scandal using financial and email data.</p>
+                  <h4>Obtaining Data:</h4>
+                  <p>Public datasets from the Enron scandal, including financial and email data, were used.</p>
+                  <h4>Data Exploration:</h4>
+                  <p>Explored the dataset to understand its structure, distribution, and key features. Identified missing values and their distribution across features.</p>
+                  <h4>Data Preprocessing:</h4>
+                  <p>Removed outliers and irrelevant features. Engineered new features, such as the ratio of emails sent to/from persons of interest. Selected important features using the SelectKBest module from sklearn.</p>
+                  <h4>Model Training:</h4>
+                  <p>Trained multiple classifiers, including DecisionTree, RandomForest, and AdaBoost.</p>
+                  <h4>Parameter Tuning:</h4>
+                  <p>Used GridSearchCV for hyperparameter tuning to optimize model performance.</p>
+                  <h4>Evaluation:</h4>
+                  <p>Evaluated models using accuracy, precision, recall, and F1 scores.</p>
+                  <br>
+                  <h3>Key Findings:</h3>
+                  <h4>Outlier Removal:</h4>
+                  <p>Removed a significant outlier identified as a typo ('TOTAL').</p>
+                  <h4>Feature Engineering:</h4>
+                  <p>Created a new feature 'ratio' = ‘from_this_person_to_poi’ / ‘from_poi_to_this_person’. Selected the top features using SelectKBest.</p>
+                  <h4>Model Performance:</h4>
+                  <p>
+                      <strong>DecisionTreeClassifier:</strong> Accuracy: 0.808, Precision: 0.298, Recall: 0.253<br>
+                      <strong>RandomForestClassifier:</strong> Accuracy: 0.846, Precision: 0.378, Recall: 0.124<br>
+                      <strong>AdaBoostClassifier:</strong> Accuracy: 0.812, Precision: 0.332, Recall: 0.311<br>
+                      AdaBoostClassifier outperformed other models with the highest average F1 Score of 0.32.
+                  </p>
+                  <br>
+                  <h3>Role and Contributions:</h3>
+                  <p>As a Data Science Intern at Nice Hi-Tech Centre, my contributions included:</p>
+                  <p>
+                      - Launched a robust data preprocessing pipeline using Microsoft Azure cloud services, reducing data inconsistencies by 95%.<br>
+                      - Administered advanced models using statistical methods, achieving an F1 Score of 0.32.<br>
+                      - Conducted comprehensive hyper-parameter tuning and cross-validation to ensure model accuracy and reliability.<br>
+                      - Developed interactive dashboards using Tableau, providing weekly insights that improved decision-making by 30%.<br>
+                      - Utilized SQL databases for efficient data management and client transparency.<br>
+                      - Worked on developing strategies to ensure fraud detection mechanisms were robust within Nice Hi-Tech Centre.<br>
+                      - Implemented data analysis practices to prevent fraud and enhance organizational security.
+                  </p>
+                  <br>
+                  <h3>Conclusion:</h3>
+                  <p>The Enron Fraud Detection project successfully demonstrated the application of machine learning to identify potential fraudsters. By leveraging advanced data preprocessing, feature engineering, and model tuning techniques, the project achieved significant insights and high model performance. This work not only contributed to understanding and preventing corporate fraud but also helped in establishing fraud detection strategies within Nice Hi-Tech Centre, ensuring the organization was well-protected against similar risks.</p>
               </div>
           </div>
-        </div>
-
+      </div>
+  </div>
+  
+               
+          
         <!-- Experience at Aptech -->
         <div class="experience-card">
            <h3 class="experience-heading">Aptech</h3>
@@ -258,18 +310,56 @@
               <div class="experience-item">
                 <i class="fas fa-briefcase"></i>
                 <h3>Machine Learning Intern</h3>
-                <p>Worked as a Machine Learning Intern from July 2019 to October 2019.</p>
+                <p>During my internship at Aptech, I developed a University Admission Prediction System using machine learning techniques to predict graduate program acceptance probabilities. The project involved data preprocessing, model training with various algorithms, and creating interactive visualizations, ultimately identifying the Multi-layer Perceptron model as the most effective. This initiative enhanced my skills in applying advanced data analysis and machine learning to real-world challenges in education.</p>
                 <button class="more-details-toggle-button" onclick="toggleMoreDetails('aptech-details')" data-target="aptech-details">View More Details</button>
                 <div id="aptech-details" class="more-details">
-                    <p>Detailed overview of the Machine Learning Intern role...</p>
-                </div>
-              </div>
-          </div>
-        </div>
+                  <h3>Overview of University Admission Prediction System</h3>
+                  <BR>
+                  <h3>Abstract</h3>
+                  <p>The project addresses the challenge of predicting university admissions, an essential aspect for prospective graduate students. Utilizing historical data of applicants, the project aims to forecast acceptance probabilities by leveraging machine learning techniques. Various algorithms were tested, with the Multi-layer Perceptron model emerging as the most effective.</p>
 
-    </div>
+                 <br>
+                  <h3>Introduction</h3>
+                  <p>Current challenges in the university admission process, including inefficiencies and inaccuracies in predicting acceptance based on student profiles. Introduction of a machine learning model to predict admission likelihoods, thereby streamlining the application process.</p>
+                  <br><h4>Literature Survey</h4>
+                  <p>Review of existing research and methods in predictive modeling for educational admissions.</p>
+                  <br><h4>System Requirements</h4>
+                  <p>Minimum hardware and software requirements, including Intel Core I3 processor, 4 GB RAM, 500 GB Hard Disk, Python programming language, PyCharm IDE, Flask, TensorFlow, and Keras.</p>
+                  <br><h4>System Design & Analysis</h4>
+                  <p>Detailed architecture and design of the system, including UML diagrams (Class, Data Flow, Sequence, Use Case, Activity Diagrams). Explanation of the software environment and the tools used.</p>
+                  <br><h4>Implementation</h4>
+                  <p>Detailed description of the problem being addressed. Explanation of the data preprocessing steps, train-test split, model training using various algorithms, and selection of the best-performing model.</p>
+                  <br><h4>System Testing</h4>
+                  <p>Different types of tests performed to ensure the reliability and accuracy of the system, including Unit Testing, Integration Testing, Functional Testing, System Testing, White Box Testing, and Black Box Testing. Test cases and their outcomes are documented to validate the system's functionality.</p>
+                  <br><h4>Input and Output Design</h4>
+                  <p>Design considerations for user input and system output to ensure ease of use and clarity.</p>
+                  <br><h4>Results</h4>
+                  <p>Screenshots and descriptions of various interfaces and outputs of the system, including user registration, dataset upload, university prediction, and graphical representation of predictions.</p>
+                  <br><h4>Conclusion</h4>
+                  <p>Summary of the project's success in developing an accurate and efficient university admission prediction model. Discussion on potential future enhancements, such as incorporating more diverse data and improving model accuracy.</p>
+                  
+                  <br><h4>Key Achievements</h4>
+                  <p>-Data Preprocessing: Successfully cleaned and prepared the dataset for modeling, handling missing values and outliers effectively.</p>
+                  <p>-Model Development: Implemented multiple machine learning algorithms (Random Forest, SVM, Logistic Regression, Multi-layer Perceptron) and identified the best-performing model.</p>
+                  <p>-Feature Engineering: Created and selected relevant features to improve model accuracy.</p>
+                  <p>-Visualization: Developed interactive visualizations to present prediction results effectively.</p>
+                  <p>-Documentation and Testing: Provided thorough documentation of the system and conducted extensive testing to ensure reliability.</p>
+
+                 <br> <h4>Future Work</h4>
+                  <p>-Enhancing the model with additional features such as recommendation letters and personal statements.</p>
+                  <p>-Expanding the dataset to include more diverse student profiles and geographic locations.</p>
+                  <p>-Integrating the model into a user-friendly web interface for broader accessibility.</p>
+
+                 <br> <h4>Conclusion</h4>
+                  <p>This comprehensive project showcases my ability to apply machine learning techniques to solve real-world problems in the educational domain, demonstrating my proficiency in data preprocessing, model development, and system implementation.</p>
+               </div>
+            </div>
+         </div>
+      </div>
    </div>
 </div>
+</div>
+
 
 <script>
   function toggleExperience(sectionId) {
