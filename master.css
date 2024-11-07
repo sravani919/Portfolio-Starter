@@ -144,9 +144,214 @@ a {
 
 
 
-
 /*ABOUT US SECTION*/
+
+/* Main container styling */
 .main-section {
+	max-width: 1400px;
+	margin: auto;
+	padding: 40px;
+	color: #ffffff;
+	background-color: #0f1a2b;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+/* Heading styling */
+.heading-text {
+	font-size: 32px;
+	color: #4791f0;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+/* Profile Image Styling */
+.profile-image {
+	display: flex;
+	justify-content: center;
+	margin: 20px 0;
+}
+
+.profile-image img {
+	border-radius: 50%;
+	width: 200px;
+	height: 200px;
+	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+	transition: transform 0.3s ease;
+}
+
+.profile-image img:hover {
+	transform: scale(1.05);
+}
+
+
+/* Styling for Achievement Banner Section */
+.achievement-banner {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 20px;
+  }
+  
+  .achievement-banner img {
+	max-width: 80%; /* Limits the width for responsiveness */
+	height: auto;
+	border-radius: 8px; /* Optional rounded corners */
+	margin-bottom: 10px;
+  }
+  
+  .caption {
+	font-size: 0.9em;
+	color: #aaa;
+	text-align: center;
+	margin-top: 5px;
+  }
+  
+
+  /* Styling for the college link */
+.college-link {
+	display: block;
+	text-align: center;
+	margin-top: 10px;
+	font-size: 1em;
+	color: #4791f0;
+	text-decoration: none;
+	font-weight: bold;
+  }
+  
+  .college-link:hover {
+	text-decoration: underline;
+	color: #ffffff;
+  }
+  
+/* Experience headings */
+.experience h3 {
+    font-size: 1.3em;
+    color: #4791f0;
+    margin-bottom: 5px;
+}
+
+.experience p {
+    font-size: 1em;
+    color: #ffffff;
+}
+
+/* Bullet point list styling */
+.experience ul {
+    list-style-type: disc;
+    padding-left: 20px; /* Align bullets inside the border */
+    margin-top: 10px;
+    font-size: 0.95em; /* Slightly smaller font to balance with paragraph */
+    color: #d3d3d3;
+    line-height: 1.7;
+}
+
+.experience ul li {
+    margin-bottom: 8px;
+}
+
+.experience ul li::marker {
+    color: #4791f0; /* Custom color for bullet markers */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+.view-more-link {
+    color: #4791f0;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.view-more-link:hover {
+    color: #337ab7;
+    text-decoration: underline;
+}
+
+.image-gallery {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+    margin: 10px 0;
+}
+
+.gallery-image {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.full-width-image img {
+    width: 100%;
+    border-radius: 8px;
+    margin: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+/* Section title styling */
+.section-title {
+	font-size: 1.5em;
+	color: #add8e6;
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+
+/* Paragraph styling */
+.content__about p {
+	font-size: 16px;
+	line-height: 1.8;
+	text-align: justify;
+	margin-bottom: 20px;
+}
+
+/* List styling */
+.key-highlights {
+	list-style-type: none;
+	padding-left: 0;
+	margin-top: 10px;
+}
+
+.key-highlights li {
+	font-size: 16px;
+	margin-bottom: 10px;
+	line-height: 1.6;
+}
+
+.key-highlights li::before {
+	content: "✔";
+	color: #28a745;
+	margin-right: 8px;
+	font-weight: bold;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+	.main-section {
+		padding: 10px;
+		max-width: 100%;
+	}
+
+	.heading-text {
+		font-size: 1.8em;
+	}
+
+	.content__about p, 
+	.key-highlights li {
+		font-size: 0.95em;
+	}
+	
+	.profile-image img {
+		width: 150px;
+		height: 150px;
+	}
+}
+
+/*****.main-section {
 	width: 100%;
 	float: left;
 	padding: 0px 0px 110px 0px;
@@ -184,7 +389,7 @@ table td {
 	font-size: 14px;
 	text-align: left;
 	padding: 5px 0px;
-}
+}*****/
 /*****SKILL SECTION*****/
 /*****SKILL SECTION*****/
   
@@ -1053,23 +1258,33 @@ section {
 }
 .main1 h3 {
 	font-size: 1.5rem;
+	font-weight: 300; /* Slightly thinner font */
+    color: #d1d1d1;
+
 }
 .main1 h1 {
 	font-size: 3rem;
-	font-weight: 600;
-	margin-top: .5rem;
+	font-weight: 700;
+	
 	color: #4791f0;
+	transition: color 0.3s ease-in-out, transform 0.3s ease;
+}
+.main1 h1:hover {
+	color: #5aa5ff; /* Lighten on hover */
+	transform: scale(1.03); /* Slightly increase size */
 }
 .main1 p {
 	line-height: 1.7;
 	font-size: 1.15rem;
-	margin-top: .5rem;
+	color: #b8c2cc;
+	margin-top: 0.5rem;
+	
 }
 .Information {
 	width: 50%;
 }
 
-.social {
+/*.social {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 1rem;
@@ -1098,7 +1313,7 @@ section {
 	transition: all .3s ease-in-out;
 
 }
-
+*/
 
 
 .images {
@@ -1227,19 +1442,20 @@ section {
 /*BUTTON*/
 .cv-btn {
 	margin-top: 1.5rem;
-	padding: 1em 2.5em;
+	padding: 1em 2.8em;
 	border-radius: 25px;
 	background-color: #33383C;
 	font-size: 1rem;
 	font-weight: bold;
 	color: white;
-	border: 2px solid var(--primary-color);
+	border: 2px solid #4791f0; 
 	cursor: pointer;
-	transition: .3s ease-in;
+	transition: background-color 0.3s ease, transform 0.3s ease
 }
 .cv-btn:hover {
 	background-color: transparent;
-	color: var(--primary-color);
+	color: #4791f0;
+	transform: scale(1.05)
 }
 @media only screen and (max-width: 1024px) {
 	html {
@@ -1247,12 +1463,6 @@ section {
 	}
 }
 
-@media screen and (max-width: 768px) {
-	html {
-		font-size: 100%;
-	}
-
-}
 
 @media only screen and (max-width: 480px) {
 
@@ -1281,83 +1491,6 @@ section {
 	}
 
 }
-
-@media only screen and (max-width: 320px) {
-	.images {
-		height: 17em;
-	}
-	.blue-bg-outer {
-		width: 16em;
-		height: 16em;
-
-	}
-
-	.white-bg {
-		width: 13em;
-		height: 13em;
-	}
-
-	.blue-bg {
-		width: 11em;
-		height: 11em;
-	}
-
-	.blue-bg img {
-		position: relative;
-		bottom: 20px;
-		right: 10px;
-		width: 100%;
-	}
-}
-
-
-
-  /* Typing keyframes */
-  @keyframes typing {
-	from { width: 0 }
-	to { width: 60% }
-  }
-  
-  /* Blinking cursor keyframes */
-  .Information h3, .Information h1, .Information p {
-	position: relative;
-	white-space: nowrap;
-	overflow: hidden;
-	border-right: .15em solid #33383C; /* Cursor-like solid block */
-	/* The 'steps' function should match the exact number of characters */
-	animation: typing 3.5s steps(30, end) forwards, /* Adjust the '30' to match the number of characters */
-			  blink-caret .75s step-end infinite;
-	animation-fill-mode: forwards; /* Keeps the styles set by the final keyframe after the animation completes */
-  }
-  
-  /* Typing keyframes */
-  @keyframes typing {
-	from { width: 0 }
-	to { width: 100% }
-  }
-  
-  /* Blinking cursor keyframes */
-  @keyframes blink-caret {
-	from, to { border-color: transparent }
-	50% { border-color: #031f3c }
-  }
-  
-  .Information h1 {
-	animation-delay: 3.5s; /* Starts after the first line completes */
-  }
-  
-  .Information p {
-	animation-delay: 7s; /* Adjust based on the text length and when you want it to start */
-  }
-  
-  .Information h1 {
-	animation-delay: 3.5s; /* Starts after the first line completes */
-  }
-  
-  .Information p {
-	animation-delay: 7s; /* Adjust based on the text length and when you want it to start */
-  }
-/* EXPERIENCE SECTION */
 /* EXPERIENCE SECTION */
 .experience-card {
     display: inline-block;
