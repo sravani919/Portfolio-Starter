@@ -208,6 +208,39 @@ a {
 	margin-top: 5px;
   }
   
+  .custom-image-gallery {
+    display: flex;
+    justify-content: center; /* Center the images within the container */
+    gap: 10px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+.custom-gallery-image {
+    width: calc(25% - 10px); /* Adjusted width for four images per row */
+    max-width: 400px; /* Maximum width limit for larger screens */
+    height: 200px; /* Fixed height for uniformity */
+    object-fit: cover; /* Ensures the image fills the space while maintaining aspect ratio */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.custom-college-link {
+    display: block;
+    text-align: center;
+    color: #0056b3; /* Custom color for link */
+    font-weight: bold;
+    margin-top: 15px;
+    text-decoration: none;
+}
+
+.custom-college-link:hover {
+    text-decoration: underline;
+}
+
+
+
+
 
   /* Styling for the college link */
 .college-link {
@@ -268,29 +301,68 @@ html {
     color: #337ab7;
     text-decoration: underline;
 }
-
 .image-gallery {
     display: flex;
-    justify-content: space-between;
+    justify-content: center; /* Centers the gallery in the middle of the container */
     gap: 5px;
-    margin: 10px 0;
+    margin: 20px auto;
+    flex-wrap: wrap; /* Allows images to wrap to the next line if needed */
+    max-width: 80%; /* Sets the gallery width to 80% of its container */
 }
 
 .gallery-image {
-    width: 100%;
-    max-width: 400px;
+    flex: 1 1 calc(33.33% - 10px); /* Three images per row with equal spacing */
+    max-width: 400px; /* Limits maximum width of each image */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    object-fit: cover; /* Ensures images fill the space without stretching */
 }
 
 .full-width-image img {
-    width: 100%;
+    width: 80%; /* Sets the image to take up 80% of the screen width */
+    max-width: 800px; /* Limits the maximum width to avoid too large images on wide screens */
+    margin: 20px auto;
+    display: block;
     border-radius: 8px;
-    margin: 10px 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.cedc-gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
 
+.cedc-row {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.cedc-gallery-image {
+    width: 300px; /* Adjust width as needed */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cedc-gallery-caption {
+    text-align: center;
+    font-size: 1em;
+    color: #666;
+    margin-top: 10px;
+    width: 100%; /* Ensure full width for centering */
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.cedc-gallery-image:hover {
+    transform: scale(1.05);
+}
 
 
 /* Section title styling */
